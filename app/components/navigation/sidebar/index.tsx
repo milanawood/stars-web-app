@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -8,9 +9,10 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
   return (
     <div
-      className={`fixed inset-0 bg-offwhite z-30 transition-transform transform ${
+      className={`fixed inset-0 bg-eggshell bg-cover bg-center z-30 transition-transform transform ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
+      style={{ backgroundImage: 'url(/path/to/background-texture.png)' }}
     >
       <div className="flex justify-end p-4">
         <button onClick={toggle} className="text-gray-700 focus:outline-none">
@@ -31,11 +33,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
         <Link href="/about" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
           About Us
         </Link>
-        <Link href="/team" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
-          Team
+        <Link href="/careers" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
+          Careers
         </Link>
-        <Link href="/contact" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
-          Contact
+        <Link href="/news" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
+          News
+        </Link>
+        <Link href="/faq" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
+          FAQ
+        </Link>
+        <Link href="/freepizza" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
+          Free Pizza
         </Link>
       </nav>
     </div>

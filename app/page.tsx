@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Hero from "./components/hero/Hero";
+import HeroVideo from "./components/HeroVideo";
 
 export default function Home() {
   return (
     <>
       <div className="container mx-auto px-4">
-        <Hero />
+        <HeroVideo desktopVideo="./images/promo-video-1.mp4" mobileVideo="./images/promo-video-1.mp4" index={0} image={undefined} mobileImage={undefined} _key={""} _type={""}/>
         <h1>Welcome to STARS®</h1>
         <p>Your favorite place for burgers.</p>
       </div>

@@ -14,6 +14,7 @@ const Logo = ({ color }: { color: string }) => {
   useEffect(() => {
     window.addEventListener("resize", updateWidth);
     updateWidth();
+    return () => window.removeEventListener("resize", updateWidth); // Clean up the event listener
   }, []);
 
   return (

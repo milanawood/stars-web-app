@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Navigation from "./navigation";
+import Navigation from ".";
 
 const ClientNav: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
