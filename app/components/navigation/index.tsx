@@ -1,19 +1,11 @@
-"use client";
-import Navbar from "./navbar";
-import Sidebar from "./sidebar";
+import React from 'react';
+import ClientNav from './ClientNav';
+import Navbar from './navbar';
+import Sidebar from './sidebar';
 
-interface NavigationProps {
-  isNavOpen: boolean;
-  toggleNav: () => void;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ isNavOpen, toggleNav }) => {
-  return (
-    <>
-      <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav} />
-      <Sidebar isOpen={isNavOpen} toggle={toggleNav} />
-    </>
-  );
+const Navigation = (props: React.JSX.IntrinsicAttributes) => {
+    return <ClientNav {...props} />;
 };
 
+export { Navbar, Sidebar, ClientNav };
 export default Navigation;
