@@ -17,7 +17,7 @@ interface NavContextProps {
 const NavContext = createContext<NavContextProps | undefined>(undefined);
 
 const NavProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [logo, setLogo] = useState('yellow');
+  const [logo, setLogo] = useState('red');
 
   const secondaryData = {
     links: [
@@ -47,7 +47,7 @@ const NavProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       if (window.innerWidth < 800) {
         setLogo('blue');
       } else {
-        setLogo('yellow');
+        setLogo('red');
       }
     };
 

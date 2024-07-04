@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <>
       <div className="container mx-auto px-4">
-        <HeroVideo desktopVideo="./images/promo-video-1.mp4" mobileVideo="./images/promo-video-1.mp4" index={0} image={undefined} mobileImage={undefined} _key={""} _type={""}/>
+      <HeroVideo desktopVideo="./images/promo-video-1.mp4" mobileVideo="./images/promo-video-1.mp4" index={0} image={undefined} mobileImage={undefined} _key={""} _type={""}/>
+
         <h1>Welcome to STARS®</h1>
         <p>Your favorite place for burgers.</p>
       </div>

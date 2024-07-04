@@ -1,32 +1,15 @@
-"use client";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import React from 'react';
+import Image from 'next/image';
 
-const Logo = ({ color }: { color: string }) => {
-  const [width, setWidth] = useState(0);
+interface LogoProps {
+  className: string;
+  src: string;
+  alt?: string;
+}
 
-  const updateWidth = () => {
-    const newWidth = window.innerWidth;
-    setWidth(newWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateWidth);
-    updateWidth();
-    return () => window.removeEventListener("resize", updateWidth); // Clean up the event listener
-  }, []);
-
+const Logo: React.FC<LogoProps> = ({ className, src, alt = 'logo' }) => {
   return (
-    <Link href="/">
-      <Image
-        src={`/images/logo-${color}.png`}
-        alt="logo"
-        width={width < 1024 ? 150 : 250}
-        height={width < 1024 ? 45 : 74}
-        className="relative"
-      />
-    </Link>
+    <Image className={className} src={src} alt={alt} width={300} height={80} />
   );
 };
 

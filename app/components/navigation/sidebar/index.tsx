@@ -1,51 +1,37 @@
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import { useNavContext } from '@/app/contexts/NavContext';
+import { useNavStore } from '@/app/stores/navStore';
+import NavLink from '../../NavLink';
+import SocialLink from './SocialLink';
 
-interface SidebarProps {
-  isOpen: boolean;
-  toggle: () => void;
-}
+const Sidebar: React.FC = () => {
+  const { data, secondaryData } = useNavContext();
+  const { toggleNav } = useNavStore();
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
   return (
-    <div
-      className={`fixed inset-0 bg-eggshell bg-cover bg-center z-30 transition-transform transform ${
-        isOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}
-      style={{ backgroundImage: 'url(/images/background-transparent.png)' }}
-    >
-      <div className="flex justify-end p-4">
-        <button onClick={toggle} className="text-gray-700 focus:outline-none">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentColor"
-              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
-            />
-          </svg>
-        </button>
+    <div className="800:hidden fixed h-[calc(100vh-50px)] top-10 left-0 w-full bg-offwhite px-12 pt-5">
+      <img
+        width="320"
+        height="320"
+        className="absolute -right-[100px] top-[150px]"
+        style={{ mixBlendMode: 'multiply' }}
+        src="./images/spinning-logo.png"
+        alt="Smiley Face with star eyes footer"
+      />
+      {data?.links?.map((link) => (
+        <NavLink key={link._key} path={`/pages/${link.slug}`} name={link.title} onClick={toggleNav} />
+      ))}
+      <NavLink path="/what" name="WHAT" onClick={toggleNav} />
+      <div className="grid text-left my-4 grid-cols-2">
+        {secondaryData?.links?.map((link) => (
+          <NavLink key={link._key} path={`/pages/${link.slug}`} name={link.title} onClick={toggleNav} />
+        ))}
       </div>
-      <nav className="flex flex-col items-center space-y-6 mt-10">
-        <Link href="/about" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
-          ABOUT
-        </Link>
-        <Link href="/who" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
-          WHO
-        </Link>
-        <Link href="/what" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
-          WHAT
-        </Link>
-        <Link href="/where" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
-          WHERE
-        </Link>
-        <Link href="/blog" className="text-xl text-gray-700 hover:text-gray-900" onClick={toggle}>
-          NEWS
-        </Link>
-      </nav>
+      <div className="flex">
+        {secondaryData?.socialLinks?.map((link) => (
+          <SocialLink key={link._key} link={link.url} text={link.title} total={secondaryData.socialLinks.length} />
+        ))}
+      </div>
     </div>
   );
 };
