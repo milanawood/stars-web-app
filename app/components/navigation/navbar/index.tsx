@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const { logo } = useNavContext();
 
   return (
-    <div className="col-span-12 text-center 800:col-span-2 inline-flex justify-center items-center">
+    <div className="flex flex-col items-center justify-center w-full h-full">
       <Logo className="inline-block 800:hidden relative top-[3px] max-w-[120px] 800:max-w-[220px] w-full" src={`/images/logo-${logo}.png`} />
       <Logo className="hidden 800:inline-block relative top-[3px] max-w-[120px] 800:max-w-[220px] w-full drop-shadow" src={`/images/logo-${logo}.png`} />
     </div>

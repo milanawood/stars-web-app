@@ -9,7 +9,7 @@ const Sidebar: React.FC = () => {
   const { toggleNav } = useNavStore();
 
   return (
-    <div className="800:hidden fixed h-[calc(100vh-50px)] top-10 left-0 w-full bg-offwhite px-12 pt-5">
+    <div className="800:hidden fixed h-[calc(100vh-50px)] top-10 left-0 w-full bg-offwhite px-12 pt-5 z-50">
       <img
         width="320"
         height="320"
