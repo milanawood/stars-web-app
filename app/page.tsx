@@ -5,7 +5,7 @@ import VideoSection from './components/VideoSection';
 import Marquee from './components/Marquee';
 import MarqueeItem from './components/MarqueeItem';
 import Sticker from './components/Sticker';
-import BackgroundImage from './components/BackgroundImage';
+import Manifest from './components/Manifest';
 
 
 export default function Home() {
@@ -39,6 +39,12 @@ export default function Home() {
           <Sticker animationClass="animate-rock" style={{ top: '20%', left: '5%' }} >
               <img src="/images/burger-icon-circle.png" alt="Sticker Image" width="100" height="100"/>
               </Sticker>
+          </Slide>
+          <Slide>
+            <Manifest />
+            <Sticker animationClass="animate-rock" style={{ top: '20%', left: '5%' }}>
+              <img src="/images/burger-icon-circle.png" alt="Sticker Image" width="100" height="100" />
+            </Sticker>
           </Slide>
           {/* Add more slides as needed */}
         </div>

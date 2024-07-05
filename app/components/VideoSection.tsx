@@ -11,7 +11,7 @@ const VideoSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full m-0 p-0 block 800:hidden">
+    <div className="embla__slide js-height mt-[60px] h-mobile-screen  h-[calc(100vh-60px)] 800:h-screen 800:mt-0 w-[100vw] 800:w-auto 800:aspect-[calc(1920/1080)] relative">
       <video
         className="w-full h-full object-center"
         loop
