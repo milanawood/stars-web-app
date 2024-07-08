@@ -2,7 +2,7 @@
 import React from 'react';
 import { useNavStore } from '@/app/stores/navStore';
 import { useNavContext } from '@/app/contexts/NavContext';
-import NavLink from '../NavLink';
+import NavLink from './NavLink';
 import SocialLink from './SocialLink';
 import Image from 'next/image';
 

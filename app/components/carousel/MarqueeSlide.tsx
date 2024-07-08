@@ -2,7 +2,7 @@ import React from 'react';
 
 const MarqueeSlide: React.FC = () => {
   return (
-    <div className="embla__slide js-height mt-[60px] h-mobile-screen h-[calc(100vh-60px)] 800:h-screen 800:mt-0 w-[76px]">
+    <div className="embla__slide js-height mt-[60px] h-[calc(100vh-60px)] 800:h-screen 800:mt-0 w-[76px]">
       <div className="h-screen transform rotate-180 select-none text-marquee pointer-events-none relative" style={{ backgroundColor: 'rgb(113, 244, 123)' }}>
         <div className="transform rotate-90 origin-top-left block w-[100vh] h-[50px] translate-x-[92px] 800:translate-x-[100px]">
           <div data-marqy="" data-direction="left" className="flex h-screen w-full">

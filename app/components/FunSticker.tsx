@@ -7,7 +7,7 @@ interface ArtifactProps {
   customClass: string;
 }
 
-const Artifact: React.FC<ArtifactProps> = ({ src, alt, customClass }) => {
+const FunSticker: React.FC<ArtifactProps> = ({ src, alt, customClass }) => {
   return (
     <div className={`z-[14] overflow-visible items-center justify-center absolute ${customClass} pointer-events-none select-none`}>
       <Image src={src} alt={alt} layout="fill" objectFit="cover" />
@@ -15,4 +15,4 @@ const Artifact: React.FC<ArtifactProps> = ({ src, alt, customClass }) => {
   );
 };
 
-export default Artifact;
+export default FunSticker;
