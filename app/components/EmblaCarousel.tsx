@@ -1,0 +1,45 @@
+"use client";
+import React, { useCallback, useEffect } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { WheelGesturesPlugin, WheelGesturesPluginOptions } from 'embla-carousel-wheel-gestures';
+
+interface EmblaCarouselProps {
+  children: React.ReactNode;
+}
+
+const wheelGesturesOptions: WheelGesturesPluginOptions = {
+  forceWheelAxis: 'x', // Force wheel gestures to be horizontal
+  target: undefined, // Default target for wheel gestures
+  wheelDraggingClass: 'is-wheel-dragging',
+};
+
+const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ children }) => {
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true },
+    [
+      Autoplay(),
+      WheelGesturesPlugin(wheelGesturesOptions),
+    ]
+  );
+
+  const onScroll = useCallback(() => {
+    if (!emblaApi) return;
+    console.log('Scrolling'); // Debug statement
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    emblaApi.on('scroll', onScroll);
+    console.log('Embla API initialized'); // Debug statement
+    onScroll();
+  }, [emblaApi, onScroll]);
+
+  return (
+    <div className="embla" ref={emblaRef}>
+      <div className="embla__container">{children}</div>
+    </div>
+  );
+};
+
+export default EmblaCarousel;

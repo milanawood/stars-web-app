@@ -21,8 +21,8 @@ const NavProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   const secondaryData = {
     links: [
-      { _key: '1', title: 'About', slug: 'about' },
-      { _key: '2', title: 'Services', slug: 'services' },
+      { _key: '1', title: 'WHO', slug: 'about' },
+      { _key: '2', title: 'WHAT', slug: 'team' },
     ],
     socialLinks: [
       { _key: '1', url: 'https://instagram.com', title: 'Instagram' },
@@ -34,7 +34,7 @@ const NavProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     links: [
       { _key: '1', _type: 'navPage', title: 'Home', slug: '' },
       { _key: '2', _type: 'navPage', title: 'Blog', slug: 'blog' },
-      { _key: '3', _type: 'market', title: 'Shop' },
+      { _key: '3', _type: 'team', title: 'Community' },
     ],
   };
 

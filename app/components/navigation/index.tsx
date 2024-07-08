@@ -1,11 +1,10 @@
-import React from 'react';
-import ClientNav from './ClientNav';
-import Navbar from './navbar';
+/*import React from 'react';
+import NavBar from './navbar';
 import Sidebar from './sidebar';
 
 const Navigation = (props: React.JSX.IntrinsicAttributes) => {
-    return <ClientNav {...props} />;
+    return <NavBar {...props} />;
 };
 
-export { Navbar, Sidebar, ClientNav };
-export default Navigation;
+export { NavBar, Sidebar };
+export default Navigation; */

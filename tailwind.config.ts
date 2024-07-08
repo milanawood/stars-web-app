@@ -15,7 +15,19 @@ const config: Config = {
       },
       fontFamily: {
         termina: ['"Termina"', 'sans-serif'],
-        //nobell: ['"AnotherCustomFont"', 'sans-serif'], // Replace with your Adobe font name
+      },
+      screens: {
+        '800': '800px',
+        '1000': '1000px'
+      },
+      height: {
+        'mobile-screen': 'calc(100vh - 60px)',
+        'screen': '100vh',
+      },
+      minWidth: {
+        'full': '100vw',
+        '80vh': '80vh',
+        '800px': '800px',
       },
       backgroundImage: {
         "hero-pattern": "url('/images/background-transparent.png')",
