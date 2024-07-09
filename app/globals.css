@@ -4,34 +4,68 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.font-outline {
-  -webkit-text-stroke: 1px #000;
+@layer utilities {
+  @variants responsive {
+    .text-outline {
+      -webkit-text-stroke: 1px #000;
+    }
+    .animate-vertical-marquee {
+      animation: vertical-marquee 30s linear infinite;
+    }
+    @keyframes vertical-marquee {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+  }
 }
 
-.font-outline-0 {
-  -webkit-text-stroke: 1px transparent;
+.embla {
+  @apply overflow-hidden w-full;
+}
+
+.embla__container {
+  @apply flex-nowrap;
+  backface-visibility: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  @apply relative flex-1 min-w-fit pl-2.5;
+}
+
+.ticker-slide {
+  @apply flex-[1_0_20%];
+}
+
+.is-wheel-dragging {
+  @apply cursor-grabbing;
+}
+
+.js-height {
+  @apply h-[758px];
+}
+
+@media (min-width: 800px) {
+  .js-height {
+    @apply h-screen;
+  }
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px whitesmoke;
 }
 
 .marquee-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  top:0%;
+  @apply relative w-full h-full overflow-hidden;
 }
 
 .marquee-content {
-  display: flex;
-  white-space: nowrap;
-  will-change: transform;
+  @apply flex-nowrap will-change-transform;
   animation: marquee 15s linear infinite;
-  margin: 2rem;
-}
-
-.text-marquee {
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 @keyframes marquee {
@@ -39,91 +73,36 @@
   100% { transform: translateX(-100%); }
 }
 
-[data-marqy-content] {
-  display: flex;
-  animation: marquee linear infinite;
+@keyframes vertical-marquee {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
 }
 
-.text-outline {
-  -webkit-text-stroke: 1px #000;
+.text-marquee {
+  @apply overflow-hidden whitespace-nowrap;
+  animation: vertical-marquee 15s linear infinite;
+  @apply flex-col will-change-transform;
 }
 
-@media screen and (min-width: 800px) {
-  .js-height {
-    height: 100vh;
-  }
+.ticker-content {
+  @apply flex-col will-change-transform;
+  animation: vertical-marquee 15s linear infinite;
+}
+
+.ticker-wrapper {
+  @apply bg-stars h-full w-full flex overflow-hidden relative;
 }
 
 .sticker {
-  position: absolute;
-  z-index: 15;
+  @apply absolute z-20;
 }
 
-
-.embla__slide__number {
-  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  border-radius: 1.8rem;
-  font-size: 4rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--slide-height);
-} */
-
-.embla {
-  overflow: hidden;
-  max-width: 48rem;
-  margin: auto;
-  --slide-height: 19rem;
-  --slide-spacing: 0rem;
-  --slide-size: 100%;
+.artifact--7117910fe1e5 {
+  @apply top-[52%] translate-y-[-52%] right-[-20%] w-[75%];
 }
 
-.embla__container {
-  display: flex;
-  backface-visibility: hidden;
-  touch-action: pan-y pinch-zoom;
-  margin-left: calc(var(--slide-spacing) * -1);
-  
-}
-
-.embla__slide {
-  position: relative;
-  padding: 0 10px;
-  flex: 0 0 var(--slide-size);
-  min-width: 0;
-  padding-left: var(--slide-spacing);
-}
-
-.is-wheel-dragging {
-  cursor: grabbing;
-}
-
-.js-height {
-  height: 758px;
-}
-
-@media screen and (min-width: 800px) {
-  .js-height {
-    height: 100vh;
-  }
-}
-
-/* Custom styles for stickers, etc. */
-.artifact-earth {
-  top: 52%;
-  transform: translateY(-52%);
-  right: -20%;
-  width: 75%;
-  background-image: url(/public/images/spinning-logo-4.png);
-}
-
-@media screen and (min-width: 800px) {
+@media (min-width: 800px) {
   .artifact--7117910fe1e5 {
-    top: 51%;
-    transform: translateY(-51%);
-    right: -4%;
-    width: 55%;
+    @apply top-[51%] translate-y-[-51%] right-[-4%] w-[55%];
   }
 }

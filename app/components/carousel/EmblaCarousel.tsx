@@ -9,7 +9,7 @@ interface EmblaCarouselProps {
 }
 
 const wheelGesturesOptions: WheelGesturesPluginOptions = {
-  forceWheelAxis: 'x', // Force wheel gestures to be horizontal
+  forceWheelAxis: 'both', // Force wheel gestures to be horizontal
   target: undefined, // Default target for wheel gestures
   wheelDraggingClass: 'is-wheel-dragging',
 };
@@ -25,19 +25,17 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ children }) => {
 
   const onScroll = useCallback(() => {
     if (!emblaApi) return;
-    console.log('Scrolling'); // Debug statement
   }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
     emblaApi.on('scroll', onScroll);
-    console.log('Embla API initialized'); // Debug statement
     onScroll();
   }, [emblaApi, onScroll]);
 
   return (
-    <div className="embla" ref={emblaRef}>
-      <div className="embla__container">{children}</div>
+    <div className="embla w-full" ref={emblaRef}>
+      <div className="embla__container flex">{children}</div>
     </div>
   );
 };

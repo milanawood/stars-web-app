@@ -12,6 +12,9 @@ const config: Config = {
         offblack: '#333',
         offwhite: '#f5f5f5',
         eggshell: '#f0ead6',
+        stars: '#FF5858',
+        starsred: '#d359c1',
+        fontwhite: '#FFFFE6',
       },
       fontFamily: {
         termina: ['"Termina"', 'sans-serif'],
@@ -21,8 +24,9 @@ const config: Config = {
         '1000': '1000px'
       },
       height: {
+        'js-height': '851px',
+        'screen-800': '100vh',
         'mobile-screen': 'calc(100vh - 60px)',
-        'screen': '100vh',
       },
       minWidth: {
         'full': '100vw',
@@ -36,6 +40,10 @@ const config: Config = {
         marquee: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(-100%)' },
+        },
+        verticalMarquee: {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(-100%)' },
         },
         rock: {
           '0%, 100%': { transform: 'rotate(-5deg)' },
@@ -52,7 +60,8 @@ const config: Config = {
         },
       },
       animation: {
-        marquee: 'marquee 15s linear infinite',
+        verticalMarquee: 'verticalMarquee 30s linear infinite',
+        marquee: 'marquee 30s linear infinite',
         rock: 'rock 1s infinite',
         shake: 'shake 0.5s infinite',
         spin: 'spin 2s linear infinite',

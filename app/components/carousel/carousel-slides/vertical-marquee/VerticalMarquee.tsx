@@ -1,11 +1,12 @@
-"use client"
+// components/VerticalMarquee.tsx
+"use client";
 import React, { ReactNode, useEffect, useRef } from 'react';
 
-interface MarqueeProps {
+interface VerticalMarqueeProps {
   children: ReactNode;
 }
 
-const Marquee: React.FC<MarqueeProps> = ({ children }) => {
+const VerticalMarquee: React.FC<VerticalMarqueeProps> = ({ children }) => {
   const marqueeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -17,8 +18,8 @@ const Marquee: React.FC<MarqueeProps> = ({ children }) => {
 
   return (
     <div className="relative w-full h-full overflow-hidden marquee-container">
-      <div className="marquee-content absolute top-0 left-0 w-full h-full flex items-center">
-        <div ref={marqueeRef} className="flex items-center">
+      <div className="marquee-content absolute top-0 left-0 w-full h-full flex flex-col items-center space-y-2">
+        <div ref={marqueeRef} className="flex flex-col items-center space-y-2">
           {children}
         </div>
       </div>
@@ -26,4 +27,4 @@ const Marquee: React.FC<MarqueeProps> = ({ children }) => {
   );
 };
 
-export default Marquee;
+export default VerticalMarquee;
