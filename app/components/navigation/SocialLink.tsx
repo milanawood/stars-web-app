@@ -11,15 +11,6 @@ const SocialLink: React.FC<SocialLinkProps> = ({ link, text }) => {
     if (/instagram/.test(url)) {
       return '/images/instagram-icon-black.png';
     }
-    if (/twitter/.test(url)) {
-      return '/assets/twitter-icon-black.png';
-    }
-    if (/substack/.test(url)) {
-      return '/assets/substack-icon-black.png';
-    }
-    if (/linkedin/.test(url)) {
-      return '/assets/linkedin-icon-black.png';
-    } 
     return '';
   };
 

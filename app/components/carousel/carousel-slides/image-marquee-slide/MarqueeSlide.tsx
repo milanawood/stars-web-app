@@ -8,7 +8,7 @@ const MarqueeSlide: React.FC = () => {
       <div className="w-full h-full overflow-hidden relative">
         <div className="absolute w-full h-full top-0 left-0" style={{ backgroundColor: 'rgb(255, 255, 230)' }}>
           <img
-            src="/images/food-background.jpg"
+            src="/images/wax-paper.png"
             alt="background pattern"
             className="absolute w-full h-full object-cover"
             style={{ mixBlendMode: 'multiply' }}

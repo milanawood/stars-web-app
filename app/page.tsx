@@ -4,13 +4,11 @@ import NavBar from './components/navigation/NavBars';
 import EmblaCarousel from './components/carousel/EmblaCarousel';
 import Slide from './components/carousel/Slide';
 import VideoSection from './components/carousel/carousel-slides/VideoSection';
-import Sticker from './components/Sticker';
 import Manifest from './components/carousel/carousel-slides/Manifest';
 import ComingSoon from './components/carousel/carousel-slides/ComingSoon';
 import MarqueeSlide from './components/carousel/carousel-slides/image-marquee-slide/MarqueeSlide';
 import BackgroundImage from './components/BackgroundImage';
 import TickerSlide from './components/carousel/carousel-slides/vertical-marquee/TickerSlide';
-import VerticalMarquee from './components/carousel/carousel-slides/vertical-marquee/VerticalMarquee';
 
 
 
