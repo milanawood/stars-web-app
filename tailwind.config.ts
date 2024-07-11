@@ -65,6 +65,7 @@ const config: Config = {
         rock: 'rock 1s infinite',
         shake: 'shake 0.5s infinite',
         spin: 'spin 2s linear infinite',
+        vmarquee: 'vmarquee 10s linear infinite'
       },
     },
   },

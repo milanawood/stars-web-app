@@ -6,7 +6,7 @@ interface SlideProps {
 
 const Slide: React.FC<SlideProps> = ({ children }) => {
   return (
-    <div className="embla__slide js-height mt-[60px] h-mobile-screen 800:h-screen 800:mt-0 w-screen">
+    <div className="embla__slide min-w-fit">
       {children}
     </div>
   );

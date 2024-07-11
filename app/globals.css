@@ -37,9 +37,6 @@
   @apply relative flex-1 min-w-fit pl-2.5;
 }
 
-.ticker-slide {
-  @apply flex-[1_0_20%];
-}
 
 .is-wheel-dragging {
   @apply cursor-grabbing;
@@ -73,25 +70,6 @@
   100% { transform: translateX(-100%); }
 }
 
-@keyframes vertical-marquee {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(-100%); }
-}
-
-.text-marquee {
-  @apply overflow-hidden whitespace-nowrap;
-  animation: vertical-marquee 15s linear infinite;
-  @apply flex-col will-change-transform;
-}
-
-.ticker-content {
-  @apply flex-col will-change-transform;
-  animation: vertical-marquee 15s linear infinite;
-}
-
-.ticker-wrapper {
-  @apply bg-stars h-full w-full flex overflow-hidden relative;
-}
 
 .sticker {
   @apply absolute z-20;
@@ -104,5 +82,84 @@
 @media (min-width: 800px) {
   .artifact--7117910fe1e5 {
     @apply top-[51%] translate-y-[-51%] right-[-4%] w-[55%];
+  }
+}
+
+.hmarquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  width: fit-content;
+  height: 100vh;
+  transform-origin: left top;
+  overflow: hidden;
+}
+
+.hmarquee-content {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap);
+  max-width: fit-content;
+  height: 100vh;
+  animation: hmarquee 15s linear infinite;
+  margin: 1rem;
+}
+
+.hmarquee-content img {
+  gap: var(--gap);
+  width: 2rem; 
+  height: auto;
+  margin: 2rem;
+}
+
+.hmarquee__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  transform: rotate(90deg);
+  height: fit-content;
+  width: fit-content;
+}
+
+
+@keyframes hmarquee {
+  from { transform: translateY(100%); }
+  to { transform: translateY(-100%); }
+}
+
+
+.vertical-marquee-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.vertical-marquee-content {
+  display: flex;
+  flex-direction: column;
+  animation: vertical-marquee 10s linear infinite;
+}
+
+.vmarquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  transform: rotate(90deg);
+}
+
+@keyframes vertical-marquee {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }

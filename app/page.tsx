@@ -8,8 +8,7 @@ import Manifest from './components/carousel/carousel-slides/Manifest';
 import ComingSoon from './components/carousel/carousel-slides/ComingSoon';
 import MarqueeSlide from './components/carousel/carousel-slides/image-marquee-slide/MarqueeSlide';
 import BackgroundImage from './components/BackgroundImage';
-import TickerSlide from './components/carousel/carousel-slides/vertical-marquee/TickerSlide';
-
+import VerticalSlide from './components/carousel/carousel-slides/vertical-marquee/VerticalSlide';
 
 
 export default function Home() {
@@ -23,10 +22,12 @@ export default function Home() {
             <ComingSoon />
           </Slide>
           <Slide>
-            <MarqueeSlide />
+          <div className="top-0 h-full flex items-center justify-center">
+              <VerticalSlide />
+            </div>
           </Slide>
           <Slide>
-          <TickerSlide />
+            <MarqueeSlide />
           </Slide>
           <Slide>
             <Manifest />

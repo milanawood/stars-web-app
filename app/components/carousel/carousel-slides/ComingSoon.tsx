@@ -3,7 +3,7 @@ import Sticker from '../../Sticker';
 
 const ComingSoon: React.FC = () => {
   return (
-    <div className="embla__slide js-height mt-[60px] h-mobile-screen 800:h-screen 800:mt-0 w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]">
+    <div className="embla__slide js-height mt-[60px] h-mobile-screen 800:h-screen 800:mt-0 w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px] overflow-visible">
       <div className="w-full h-full top-0 relative">
         <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none" style={{ top: '12%', transform: 'translateY(-52%)', right: '-60%', width: '75%' }}>
           <img src="/images/burger-icon-circle.png" alt="STARS® burger icon" className="w-20 h-auto animate-shake" />
@@ -14,11 +14,11 @@ const ComingSoon: React.FC = () => {
         <div className="absolute select-none pointer-events-none w-full h-full top-0 left-0" style={{ backgroundColor: 'rgb(30, 241, 221)' }}>
           <img src="/images/background-transparent.png" alt="texture background texture" className="absolute w-full h-full object-cover object-center" style={{ mixBlendMode: 'multiply' }} />
         </div>
-        <div className="relative z-30 w-full h-full 800:h-screen top-0 left-0">
+        <div className="relative z-30 w-full h-full 800:h-screen top-10 left-0 overflow-visible">
           <div className="flex items-center justify-center w-full h-full 800:h-screen">
-            <div className="w-full p-8 800:p-[5vw]" style={{ color: 'rgb(255, 255, 230)' }}>
+            <div className="w-full p-8 800:p-[5vw] text-fontwhite">
               <div className="w-full text-left">
-                <h2 className="uppercase py-2 my-2 font-termina text-90 leading-76 800:text-[15vh] 800:leading-[80%] 1000:text-[16vh]">
+                <h2 className="uppercase py-2 my-2 font-termina font-bold leading-76 800:text-[15vh] 800:leading-[80%] 1000:text-[13vh]">
                   Burgers<br />Coming<br />Soon<br />
                 </h2>
                 <div className="flex justify-center w-full">
