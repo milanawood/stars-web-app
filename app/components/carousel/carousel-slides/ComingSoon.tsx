@@ -3,13 +3,13 @@ import Sticker from '../../Sticker';
 
 const ComingSoon: React.FC = () => {
   return (
-    <div className="embla__slide js-height mt-[60px] h-mobile-screen 800:h-screen 800:mt-0 w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px] overflow-visible">
+    <div className="embla__slide js-height mt-[90px] h-mobile-screen 800:h-screen 800:mt-0 w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px] overflow-visible">
       <div className="w-full h-full top-0 relative">
         <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none" style={{ top: '12%', transform: 'translateY(-52%)', right: '-60%', width: '75%' }}>
-          <img src="/images/burger-icon-circle.png" alt="STARS® burger icon" className="w-20 h-auto animate-shake" />
+          <img src="/images/burger-icon-circle.png" alt="STARS® burger icon" className="w-20 h-auto animate-rock" />
         </div>
         <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none" style={{ top: '78%', transform: 'translateY(-78%)', right: '1%', width: '32%' }}>
-          <img src="/images/spinning-logo-3.png" alt="cartoon surfing burger" className="w-full h-auto animate-rock" />
+          <img src="/images/stickers-2.png" alt="burger mascot peace sign" className="w-full h-auto animate-rock" />
         </div>
         <div className="absolute select-none pointer-events-none w-full h-full top-0 left-0" style={{ backgroundColor: 'rgb(30, 241, 221)' }}>
           <img src="/images/background-transparent.png" alt="texture background texture" className="absolute w-full h-full object-cover object-center" style={{ mixBlendMode: 'multiply' }} />
@@ -18,8 +18,8 @@ const ComingSoon: React.FC = () => {
           <div className="flex items-center justify-center w-full h-full 800:h-screen">
             <div className="w-full p-8 800:p-[5vw] text-fontwhite">
               <div className="w-full text-left">
-                <h2 className="uppercase py-2 my-2 font-termina font-bold leading-76 800:text-[15vh] 800:leading-[80%] 1000:text-[13vh]">
-                  Burgers<br />Coming<br />Soon<br />
+                <h2 className="uppercase py-2 my-2 font-termina font-bold leading-76 text-[10vh] 800:text-[15vh] 800:leading-[80%] 1000:text-[15vh]">
+                  Burgers<br />Coming<br />In <span className="text-stars"> HOT</span><br />
                 </h2>
                 <div className="flex justify-center w-full">
                   <p className="text-14 800:text-22 font-termina">
@@ -37,11 +37,8 @@ const ComingSoon: React.FC = () => {
             </div>
           </div>
         </div>
-        <Sticker animationClass="animate-none" style={{ top: '80%', left: '15%' }}>
-          <img src="/images/spinning-logo.png" alt="Sticker Image 1" width="100" height="100" />
-        </Sticker>
-        <Sticker animationClass="animate-spin" style={{ top: '85%', left: '30%' }}>
-          <img src="/images/logo-pink.png" alt="Sticker Image 2" width="100" height="100" />
+        <Sticker animationClass="animate-spin" style={{ top: '75%', left: '10%' }}>
+          <img src="/images/stickers-star-eyes-7.png" alt="Star eye retro smiley face" width="175" height="175" />
         </Sticker>
       </div>
     </div>

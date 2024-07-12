@@ -24,12 +24,12 @@ const NavBar: React.FC = () => {
       )}
       <header className="bg-offwhite 800:bg-transparent fixed grid grid-cols-12 gap-6 items-center justify-between w-full p-2 px-2.5 top-0 left-0 z-30">
         <div className="col-span-12 text-center 800:col-span-2 inline-flex justify-center items-center z-20">
-          <a href="/" className="relative top-[3px] w-full max-w-[120px] 800:max-w-[220px] inline-block">
+          <a href="/" className="relative top-[1px] w-full max-w-[120px] 800:max-w-[220px] inline-block">
             <Image src={`/images/logo-${logo}.png`} alt="logo" width={300} height={300} />
           </a>
         </div>
         <div className="hidden col-span-10 1000:col-span-8 800:flex justify-center">
-          <div className="border-offblack relative hidden 800:inline-flex items-center border rounded-full border-solid p-[2px] bg-offwhite">
+          <div className="border-sky-700 relative hidden 800:inline-flex items-center border rounded-full border-solid p-[2px] bg-offwhite">
             <NavLink path="/about" name="WHO" onClick={toggleNav} />
             <NavLink path="/contact" name="WHAT" onClick={toggleNav} />
             <NavLink path="/team" name="WHY" onClick={toggleNav} />
@@ -56,7 +56,7 @@ const NavBar: React.FC = () => {
                 src="/images/spinning-logo.png"
                 alt="Smiley Face with star eyes footer"
               />
-              <div className="my-8 uppercase border-blue-800 text-left block no-underline pb-2 text-offblack font-termina font-extrabold text-3xl leading-relaxed 800:text-16 800:font-termina border-b border-dotted last:border-b-0 800:rounded-[20px] 800:px-4 800:border-0 800:py-1 800:leading-26 800:hover:bg-black 800:hover:text-offwhite">
+              <div className="my-8 uppercase border-sky-700 text-left block no-underline pb-2 text-sky-700 font-termina font-extrabold text-3xl leading-relaxed 800:text-16 800:font-termina border-b border-dotted last:border-b-0 800:rounded-[20px] 800:px-4 800:border-0 800:py-1 800:leading-26 800:hover:bg-sky-700 800:hover:text-offwhite">
                   <NavLink path="/about" name="WHO" onClick={toggleNav} />
                   <NavLink path="/contact" name="WHAT" onClick={toggleNav} />
                   <NavLink path="/team" name="WHY" onClick={toggleNav} />

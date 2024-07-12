@@ -6,7 +6,7 @@ interface SlideProps {
 
 const Slide: React.FC<SlideProps> = ({ children }) => {
   return (
-    <div className="embla__slide min-w-fit">
+    <div className="embla__slide js-height">
       {children}
     </div>
   );
