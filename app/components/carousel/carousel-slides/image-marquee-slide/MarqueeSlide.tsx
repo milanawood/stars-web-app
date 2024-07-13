@@ -4,7 +4,7 @@ import MarqueeItem from './MarqueeItem';
 
 const MarqueeSlide: React.FC = () => {
   return (
-    <div className="embla__slide z-20 mt-[90px] h-mobile-screen 800:h-screen 800:mt-0 w-screen 1000:min-w-[66vh] 1000:max-w-[66vh]">
+    <div className="embla__slide js-height z-20 mt-[90px] 800:h-screen 800:mt-0 w-screen 1000:min-w-[66vh] 1000:max-w-[66vh]">
       <div className="w-full h-full overflow-hidden relative">
         <div className="absolute w-full h-full top-0 left-0">
           <img

@@ -21,11 +21,6 @@ export default function Home() {
         <Slide>
             <ComingSoon />
           </Slide>
-          <Slide >
-          <div className="rotate-90 max-w-5">
-              <VerticalSlide />
-            </div>
-          </Slide>
           <Slide>
             <MarqueeSlide />
           </Slide>

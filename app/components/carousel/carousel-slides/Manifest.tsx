@@ -17,7 +17,7 @@ const Manifest: React.FC = () => {
             We believe in the power of great food and great people. Our mission is to bring delicious burgers, communities in iconic locations together, across the world.
           </p>
         </div> 
-        <Sticker animationClass="animate-none" style={{ top: '15%', left: '60%' }}>
+        <Sticker animationClass="animate-none" style={{ top: '15%', left: '60%' }} >
           <img src="/images/paper-clip.png" alt="Star eye retro smiley face" width="500" height="auto" />
         </Sticker>
             <Sticker animationClass="animate-spin" style={{ top: '70%', left: '80%' }}>
