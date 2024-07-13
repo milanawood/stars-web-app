@@ -13,7 +13,7 @@ const VideoSection: React.FC = () => {
   return (
     <div className="w-screen h-screen relative">
       <video
-        className="w-screen h-screen object-cover"
+        className="w-screen h-screen object-cover opacity-80"
         loop
         muted
         autoPlay

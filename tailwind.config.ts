@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      mixBlendMode: {
+        'multiply': 'multiply',
+      },
       colors: {
         offblack: '#333',
         offwhite: '#f5f5f5',

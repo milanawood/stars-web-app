@@ -10,7 +10,7 @@ const MarqueeSlide: React.FC = () => {
           <img
             src="/images/wax-paper.png"
             alt="background pattern"
-            className="absolute w-full h-full object-cover"
+            className="absolute w-full h-full object-cover opacity-80"
             style={{ mixBlendMode: 'multiply' }}
           />
         </div>

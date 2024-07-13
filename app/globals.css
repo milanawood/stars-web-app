@@ -22,11 +22,11 @@
 
 @layer components {
   .marquee-wrapper {
-    @apply flex w-full h-full m-0 h-screen items-center overflow-visible;
+    @apply flex w-full m-0 h-screen items-center overflow-visible;
   }
 
   .vmarquee-wrapper {
-    @apply flex min-w-screen h-full m-0 h-screen items-center items-center overflow-visible;
+    @apply flex min-w-screen m-0 h-screen items-center overflow-visible;
     background-color: var(--tw-bg-opacity) #FF5858;
   }
   

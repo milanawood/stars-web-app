@@ -14,9 +14,9 @@ import VerticalSlide from './components/carousel/carousel-slides/vertical-marque
 export default function Home() {
   return (
     <>
-      <BackgroundImage width="3840" height="2160" src="/images/background-transparent.png" alt="Background" className="mix-blend-multiply z-0" />
-      <NavBar />
-      <div className="w-full is-wheel-dragging bg-offwhite h-screen fixed top-0 left-0">
+{      <BackgroundImage width="3840" height="2160" src="/images/background-transparent.png" alt="Background" className="bg-amber-50 mix-blend-multiply z-0" />
+}      <NavBar />
+      <div className="w-full is-wheel-dragging h-screen fixed top-0 left-0">
         <EmblaCarousel>
         <Slide>
             <ComingSoon />
