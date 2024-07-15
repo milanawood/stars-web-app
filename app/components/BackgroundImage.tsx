@@ -9,11 +9,9 @@ interface BackgroundImageProps {
   alt: string;
 }
 
-const BackgroundImage: React.FC<BackgroundImageProps> = ({ width, height, className, style, src, alt }) => {
+const BackgroundImage: React.FC<BackgroundImageProps> = ({ className, style, src, alt }) => {
   return (
     <img
-      width={width}
-      height={height}
       className={className}
       style={style}
       src={src}
