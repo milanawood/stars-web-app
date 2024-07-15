@@ -8,7 +8,6 @@ import Manifest from './components/carousel/carousel-slides/Manifest';
 import ComingSoon from './components/carousel/carousel-slides/ComingSoon';
 import MarqueeSlide from './components/carousel/carousel-slides/image-marquee-slide/MarqueeSlide';
 import BackgroundImage from './components/BackgroundImage';
-import VerticalSlide from './components/carousel/carousel-slides/vertical-marquee/VerticalSlide';
 
 
 export default function Home() {
