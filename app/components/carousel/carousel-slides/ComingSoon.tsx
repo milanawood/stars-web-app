@@ -1,18 +1,19 @@
 import React from 'react';
 import Sticker from '../../Sticker';
+import Image from 'next/image';
 
 const ComingSoon: React.FC = () => {
   return (
     <div className="embla__slide js-height mt-[90px] 800:h-screen 800:mt-0 min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]">
       <div className="w-full h-full top-0 relative">
         <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none" style={{ top: '12%', transform: 'translateY(-52%)', right: '-60%', width: '75%' }}>
-          <img src="/images/burger-icon-circle.png" alt="STARS® burger icon" className="w-20 h-auto animate-rock" />
+          <Image src="/images/burger-icon-circle.png" alt="STARS® burger icon" width={80} height={80} className="w-20 h-auto animate-rock" />
         </div>
         <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none" style={{ top: '78%', transform: 'translateY(-78%)', right: '1%', width: '32%' }}>
-          <img src="/images/stickers-2.png" alt="burger mascot peace sign" className="w-full h-auto animate-rock" />
+          <Image src="/images/stickers-2.png" alt="burger mascot peace sign" className="w-full h-auto animate-rock" width="100" height="175" />
         </div>
         <div className="absolute select-none pointer-events-none w-full h-full top-0 left-0" style={{ backgroundColor: 'rgb(30, 241, 221)' }}>
-          <img src="/images/background-transparent.png" alt="texture background texture" className="absolute w-full h-full object-cover object-center" style={{ mixBlendMode: 'multiply' }} />
+          <Image src="/images/background-transparent.png" alt="texture background texture" layout='fill' objectFit='cover'  className="absolute w-full h-full object-cover object-center" style={{ mixBlendMode: 'multiply' }} />
         </div>
         <div className="relative z-30 w-full h-full 800:h-screen top-10 left-0 overflow-visible">
           <div className="flex items-center justify-center w-full h-full 800:h-screen h-mobile-screen">
@@ -33,7 +34,7 @@ const ComingSoon: React.FC = () => {
                     </button>
                   </p>
                   <Sticker animationClass="animate-spin" style={{ top: '68%', left: '10%' }}>
-                 <img src="/images/stickers-star-eyes-7.png" alt="Star eye retro smiley face" width="175" height="175" />
+                 <Image src="/images/stickers-star-eyes-7.png" alt="Star eye retro smiley face" width="175" height="175" />
                  </Sticker>
                 </div>
               </div>

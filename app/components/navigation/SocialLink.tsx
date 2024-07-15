@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface SocialLinkProps {
   link: string;
@@ -22,7 +23,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ link, text }) => {
         rel="noreferrer"
         className="text-white mx-2 800:mx-6 block w-auto h-8 800:h-34"
       >
-        <img
+        <Image
           alt={`${text} icon`}
           width="100"
           height="100"

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface BackgroundImageProps {
   width: string;
@@ -11,11 +12,13 @@ interface BackgroundImageProps {
 
 const BackgroundImage: React.FC<BackgroundImageProps> = ({ className, style, src, alt }) => {
   return (
-    <img
+    <Image
       className={className}
       style={style}
       src={src}
       alt={alt}
+      layout='fill'
+      objectFit='cover'
     />
   );
 };
