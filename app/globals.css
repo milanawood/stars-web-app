@@ -97,3 +97,14 @@
 .sticker {
   @apply absolute z-20;
 }
+
+.header-shadows {
+  color: #ffffe6;
+  text-shadow: -4px 4px 0px #1a1a1a;
+}
+@media screen and (min-width: 800px) {
+  .header-shadows {
+    text-shadow: -8px 8px 0px #1a1a1a;
+  }
+}
+

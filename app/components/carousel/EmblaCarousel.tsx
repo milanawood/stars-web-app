@@ -34,7 +34,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ children }) => {
   }, [emblaApi, onScroll]);
 
   return (
-    <div className="embla w-full" ref={emblaRef}>
+    <div className="embla w-full h-js-height" ref={emblaRef}>
       <div className="embla__container flex">{children}</div>
     </div>
   );
