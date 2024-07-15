@@ -13,7 +13,7 @@ const Manifest: React.FC = () => {
         <div className="flex items-center justify-center w-full h-full 800:h-screen">
           <div className="p-8 800:p-[5vw] relative z-30">
             <h1 className="w-3/5 text-4xl text-fontwhite font-bold font-termina mr-1 mb-4">
-              STARS® is here to serve life's <span className="text-stars">adventurers.</span>
+              STARS® is here to serve life&apos;s <span className="text-stars">adventurers.</span>
             </h1>
             <p className="w-3/5 text-lg font-termina text-fontwhite">
               We believe in the power of great food and great people. Our mission is to bring delicious burgers, communities in iconic locations together, across the world.
