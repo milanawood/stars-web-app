@@ -24,9 +24,9 @@ export default function Home() {
           <Slide>
             <MarqueeSlide />
           </Slide>
-          {/*<Slide>
+          <Slide>
             <VerticalSlide />
-          </Slide>*/}
+          </Slide>
           <Slide>
             <Manifest />
           </Slide>

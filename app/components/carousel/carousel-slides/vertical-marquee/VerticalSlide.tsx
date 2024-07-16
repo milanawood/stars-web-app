@@ -15,13 +15,13 @@ const VerticalSlide = () => {
     const marquee = marqueeRef.current;
     if (marquee) {
       let offset = 0;
-      const width = marquee.scrollWidth / 2;
+      const height = marquee.scrollHeight / 2;
       marquee.innerHTML += marquee.innerHTML; 
 
       const animate = () => {
-        offset++;
-        if (offset >= width) offset = 0;
-        marquee.style.transform = `translateX(-${offset}px)`;
+        offset += 1; // Adjust the speed here
+        if (offset >= height) offset = 0;
+        marquee.style.transform = `translateY(-${offset}px)`;
         requestAnimationFrame(animate);
       };
 
