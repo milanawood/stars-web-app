@@ -3,7 +3,7 @@ import Image from "next/image";
 import BackgroundImage from "../components/BackgroundImage";
 import Sticker from "../components/Sticker";
 
-const About: React.FC = () => {
+const Who: React.FC = () => {
   return (
     <>
       <BackgroundImage
@@ -15,11 +15,20 @@ const About: React.FC = () => {
       />
       <div className="relative max-w-[1600px] m-auto">
         <div className="h-[600px] overflow-hidden relative w-full 800:h-screen 800:max-h-[900px]">
-          <div className="relative flex items-center justify-center h-full z-10">
+          <div className="relative flex items-center justify-center h-full z-10 p-8 800:p-12"  style={{ backgroundColor: 'rgb(30, 241, 221)' }}>
             <div className="flex items-center justify-center h-full w-full">
-              <div className="w-full w-[90%] h-[80%] max-w-1200 relative">
+              <div className="w-full h-full relative rounded-[10px] overflow-hidden">
                 <Image
-                  src="/images/burger-backdrop.png"
+                  src="/images/background-factory.png"
+                  alt="Burger Backdrop"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                  className="border border-black border-solid rounded-[10px]"
+                  unoptimized
+                />
+                <Image
+                  src="/images/burger-gif.gif"
                   alt="Burger Backdrop"
                   layout="fill"
                   objectFit="cover"
@@ -40,28 +49,40 @@ const About: React.FC = () => {
       </div>
       <Sticker
         animationClass="animate-none"
-        className="absolute top-[55%] left-[10%] sm:top-[70%] sm:left-[50%] sm:transform sm:translate-x-[-50%]"
+        className="absolute top-[55%] left-[10%] sm:top-[60%] sm:left-[40%] sm:transform sm:translate-x-[-50%]"
       >
         <Image
-          src="/images/polaroid-10.png"
+          src="/images/polaroid-2-10.png"
           alt="Polaroid Sticker"
           layout="responsive"
           width={275}
           height={200} 
         />
       </Sticker>
-      {/*<Sticker
+{  /*    <Sticker
         animationClass="animate-none"
-        className="absolute top-[15%] left-[60%]"
+        className="absolute top-[55%] left-[10%] sm:top-[75%] sm:left-[30%] sm:transform sm:translate-x-[-50%]"
       >
         <Image
-          src="/images/paper-clip.png"
+          src="/images/spinning-logo-2.png"
+          alt="Polaroid Sticker"
+          layout="responsive"
+          width={100}
+          height={100} 
+        />
+      </Sticker>*/}
+      <Sticker
+        animationClass="animate-none"
+        className="absolute top-[70%] left-[10%] -rotate-45"
+      >
+        <Image
+          src="/images/logo-offwhite.png"
           alt="Star eye retro smiley face"
           layout="responsive"
           width={500}
           height={500} 
         />
-  </Sticker>*/}
+  </Sticker>
       <Sticker
         animationClass="animate-spin"
         className="absolute top-[70%] left-[80%]"
@@ -78,4 +99,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default Who;

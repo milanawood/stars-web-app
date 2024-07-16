@@ -10,12 +10,20 @@
       -webkit-text-stroke: 1px #000;
     }
     @keyframes marquee {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
     @keyframes vertical-marquee {
-      0% { transform: translateY(100%); }
-      100% { transform: translateY(-100%); }
+      0% {
+        transform: translateZ(0);
+      }
+      100% {
+        transform: translate3d(-100%, 0, 0);
+      }
     }
   }
 }
@@ -25,20 +33,17 @@
     @apply flex w-full m-0 h-screen items-center overflow-visible;
   }
 
-  .vmarquee-wrapper {
-    @apply flex min-w-screen m-0 h-screen items-center overflow-visible;
-    background-color: var(--tw-bg-opacity) #FF5858;
+  [coming-soon][data-direction=left] [vmarquee-content] {
+    animation-name: vertical-marquee;
+}
+
+  [vmarquee-content] {
+    @apply flex-grow flex-shrink-0 basis-auto will-change-transform items-center w-full;
+    animation: vertical-marquee 13s linear infinite;
+    animation-play-state: running;
   }
-  
-  .vmarquee-content {
-    @apply flex whitespace-nowrap items-center w-full;
-    animation: marquee 30s linear infinite;
-  }
-  
-  .vmarquee-item {
-    @apply flex-shrink-0 flex items-baseline mx-4;
-  }
-  
+
+
   @keyframes marquee {
     0% {
       transform: translateX(100%);
@@ -48,9 +53,34 @@
     }
   }
 
-  .no-left-padding {
-    @apply !pl-0;
+}
+
+.text-marquee [coming-soon] {
+  overflow: visible;
+}
+
+[coming-soon] {
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 800px) {
+  [coming-soon] {
+      padding-top: 10px;
+      padding-bottom: 10px;
   }
+}
+[coming-soon] {
+  padding-top: 4px;
+  padding-bottom: 0;
+}
+
+[coming-soon-inner] {
+  display: flex;
+}
+
+
+[vmarquee-item] {
+  flex-grow: 0;
 }
 
 .embla {
@@ -108,3 +138,60 @@
   }
 }
 
+/* Peace Sign Burger */
+
+.peace-burger {
+  top: 78%;
+  transform: translateY(-78%);
+
+  right: 1%;
+
+  width: 32%;
+}
+
+/* Peace Sign Burger */
+@media screen and (min-width: 400px) {
+  .peace-burger {
+    top: 62%;
+    transform: translateY(-77%);
+
+    right: 1%;
+
+    width: 33%;
+  }
+}
+
+/* Peace Sign Burger */
+@media screen and (min-width: 800px) {
+  .peace-burger {
+    top: 70%;
+    transform: translateY(-80%);
+
+    right: 5%;
+
+    width: 28%;
+  }
+}
+
+/* burger button */
+
+.burger-button {
+  top: 22%;
+  transform: translateY(-52%);
+
+  right: -35%;
+
+  width: 75%;
+}
+
+/* burger button */
+@media screen and (min-width: 800px) {
+  .burger-button {
+    top: 20%;
+    transform: translateY(-51%);
+
+    right: -38%;
+
+    width: 55%;
+  }
+}

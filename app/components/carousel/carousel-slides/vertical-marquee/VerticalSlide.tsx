@@ -1,10 +1,15 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';
+
+const items = [
+  "Coming to a shack near you!",
+  "Coming to a shack near you!",
+  "Coming to a shack near you!",
+  "Coming to a shack near you!"
+];
 
 const VerticalSlide = () => {
   const marqueeRef = useRef<HTMLDivElement>(null);
-
 
   useEffect(() => {
     const marquee = marqueeRef.current;
@@ -25,21 +30,22 @@ const VerticalSlide = () => {
   }, []);
 
   return (
-    <div className="embla__slide marquee-wrapper bg-stars rotate-180">
-      <div ref={marqueeRef} className="marquee-content ">
-        <div className="marquee-item text-fontwhite uppercase font-termina font-bold text-3xl mx-4 flex items-center">
-          <Image src="/images/ticker-burger-cream.png" alt="Burger Icon" className="w-8 h-8 mx-2 inline-block" />
-          <h2 className="inline-block mx-2">Coming to a shack near you!</h2>
-        </div>
-        <div className="marquee-item text-stars uppercase font-termina font-bold text-3xl mx-4 text-outline flex items-center">
-          <Image src="/images/ticker-burger-cream.png" alt="Burger Icon" className="w-8 h-8 mx-2 inline-block" />
-          <h2 className="inline-block mx-2">Coming to a shack near you!</h2>
+    <div className="embla__slide js-height mt-[60px] h-[calc(100vh-60px)] 800:h-screen 800:mt-0 w-[76px]">
+      <div className="h-screen transform rotate-180 select-none text-marquee pointer-events-none relative bg-stars">
+        <div className="transform rotate-90 origin-top-left block w-[100vh] h-[50px] translate-x-[92px] 800:translate-x-[100px]">
+          <div className="flex h-screen w-full" ref={marqueeRef}>
+            {items.map((item, index) => (
+              <div key={index} className="flex-shrink-0 flex items-center mx-4">
+                <h3 className="uppercase my-1 mx-2 py-1 font-termina relative leading-none text-stars text-outline text-70">
+                  {item}
+                </h3>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
-
 
 export default VerticalSlide;

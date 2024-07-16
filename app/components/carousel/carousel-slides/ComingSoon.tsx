@@ -4,23 +4,23 @@ import Image from 'next/image';
 
 const ComingSoon: React.FC = () => {
   return (
-    <div className="embla__slide js-height mt-[90px] 800:h-screen 800:mt-0 min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]">
-      <div className="w-full h-full top-0 relative">
-        <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none" style={{ top: '12%', transform: 'translateY(-52%)', right: '-60%', width: '75%' }}>
+    <div className="embla__slide js-height mt-[60px] h-mobile-screen  h-[calc(100vh-60px)] 800:h-screen 800:mt-0 w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]">
+      <div className="w-full h-full top-0">
+        <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none burger-button">
           <Image src="/images/burger-icon-circle.png" alt="STARS® burger icon" width={80} height={80} className="w-20 h-auto animate-rock" />
         </div>
-        <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none" style={{ top: '78%', transform: 'translateY(-78%)', right: '1%', width: '32%' }}>
+        <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none m-0 peace-burger">
           <Image src="/images/stickers-2.png" alt="burger mascot peace sign" className="w-full h-auto animate-rock" width="100" height="175" />
         </div>
-        <div className="absolute select-none pointer-events-none w-full h-full top-0 left-0" style={{ backgroundColor: 'rgb(30, 241, 221)' }}>
+        <div className="overflow-visible absolute select-none pointer-events-none w-full h-full top-0 left-0" style={{ backgroundColor: 'rgb(30, 241, 221)' }}>
           <Image src="/images/background-transparent.png" alt="texture background texture" layout='fill' objectFit='cover'  className="absolute w-full h-full object-cover object-center" style={{ mixBlendMode: 'multiply' }} />
         </div>
-        <div className="relative z-30 w-full h-full 800:h-screen top-10 left-0 overflow-visible">
-          <div className="flex items-center justify-center w-full h-full 800:h-screen h-mobile-screen">
+        <div className="relative z-20 w-full h-full 800:h-screen top-0 left-0">
+          <div className="flex items-center justify-center w-full h-full 800:h-screen">
             <div className="w-full p-8 800:p-[5vw] text-fontwhite">
               <div className="w-full text-left">
-                <h2 className="uppercase py-2 my-2 font-termina font-bold leading-76 text-[10vh] 800:text-[15vh] 800:leading-[80%] 1000:text-[15vh]">
-                  Burgers<br />Coming<br />In <span className="text-stars"> HOT</span><br />
+                <h2 className="uppercase py-2 my-2 font-termina font-bold leading-76 text-[7vh] 800:text-[14vh] 800:leading-[80%] 1000:text-[15vh]">
+                  Burgers<br />Coming<br /> <span className="text-stars">Soon</span><br />
                 </h2>
                 <div className="flex justify-center w-full">
                   <p className="text-14 800:text-22 font-termina">

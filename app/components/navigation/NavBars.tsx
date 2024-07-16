@@ -31,7 +31,7 @@ const NavBar: React.FC = () => {
         <div className="hidden col-span-10 1000:col-span-8 800:flex justify-center">
           <div className="border-sky-700 relative hidden 800:inline-flex items-center border rounded-full border-solid p-[2px] bg-offwhite">
             <NavLink path="/about" name="WHO" onClick={toggleNav} />
-            <NavLink path="/contact" name="WHAT" onClick={toggleNav} />
+            <NavLink path="/what" name="WHAT" onClick={toggleNav} />
             <NavLink path="/team" name="WHY" onClick={toggleNav} />
             <NavLink path="/faq" name="WHERE" onClick={toggleNav} />
             <NavLink path="/community" name="COMMUNITY" onClick={toggleNav} />
@@ -58,7 +58,7 @@ const NavBar: React.FC = () => {
               />
               <div className="my-8 uppercase border-sky-700 text-left block no-underline pb-2 text-sky-700 font-termina font-extrabold text-3xl leading-relaxed 800:text-16 800:font-termina border-b border-dotted last:border-b-0 800:rounded-[20px] 800:px-4 800:border-0 800:py-1 800:leading-26 800:hover:bg-sky-700 800:hover:text-offwhite">
                   <NavLink path="/about" name="WHO" onClick={toggleNav} />
-                  <NavLink path="/contact" name="WHAT" onClick={toggleNav} />
+                  <NavLink path="/what" name="WHAT" onClick={toggleNav} />
                   <NavLink path="/team" name="WHY" onClick={toggleNav} />
                   <NavLink path="/faq" name="WHERE" onClick={toggleNav} />
                   <NavLink path="/community" name="COMMUNITY" onClick={toggleNav} />
