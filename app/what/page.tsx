@@ -21,8 +21,8 @@ const What = () => {
                 <Image
                   src="/images/background-factory.png"
                   alt="Burger Backdrop"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  object-fit="cover"
                   objectPosition="center"
                   className="border border-black border-solid rounded-[10px]"
                   unoptimized
@@ -30,8 +30,8 @@ const What = () => {
                 <Image
                   src="/images/burger-gif.gif"
                   alt="Burger Backdrop"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  object-fit="cover"
                   objectPosition="center"
                   className="border border-black border-solid rounded-[10px]"
                 />

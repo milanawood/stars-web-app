@@ -33,16 +33,15 @@
     @apply flex w-full m-0 h-screen items-center overflow-visible;
   }
 
-  [coming-soon][data-direction=left] [vmarquee-content] {
+  [coming-soon][data-direction="left"] [vmarquee-content] {
     animation-name: vertical-marquee;
-}
+  }
 
   [vmarquee-content] {
     @apply flex-grow flex-shrink-0 basis-auto will-change-transform items-center w-full;
     animation: vertical-marquee 13s linear infinite;
     animation-play-state: running;
   }
-
 
   @keyframes marquee {
     0% {
@@ -52,7 +51,6 @@
       transform: translateX(-100%);
     }
   }
-
 }
 
 .text-marquee [coming-soon] {
@@ -65,8 +63,8 @@
 }
 @media screen and (min-width: 800px) {
   [coming-soon] {
-      padding-top: 10px;
-      padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 [coming-soon] {
@@ -77,7 +75,6 @@
 [coming-soon-inner] {
   display: flex;
 }
-
 
 [vmarquee-item] {
   flex-grow: 0;
@@ -91,6 +88,11 @@
   @apply flex-nowrap;
   backface-visibility: hidden;
   touch-action: pan-y pinch-zoom;
+}
+.shadow-carousel,
+.shadow-frame {
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .embla__slide {
@@ -193,5 +195,37 @@
     right: -38%;
 
     width: 55%;
+  }
+}
+
+/* who page sticker */
+
+.who-top {
+  top: 5%;
+  transform: translateY(-5%);
+
+  right: -40%;
+  width: 80%;
+}
+
+/* who page sticker */
+@media screen and (min-width: 800px) {
+  .who-top {
+    top: -12%;
+    transform: translateY(-12%);
+    right: -30%;
+    width: 56vw;
+  }
+}
+
+/* who page sticker */
+@media screen and (min-width: 1200px) {
+  .who-top {
+    top: -22%;
+    transform: translateY(-22%);
+
+    right: -26vw;
+
+    width: 740px;
   }
 }

@@ -17,8 +17,8 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({ className, style, src
       style={style}
       src={src}
       alt={alt}
-      layout='fill'
-      objectFit='cover'
+      fill
+      object-fit='cover'
     />
   );
 };
