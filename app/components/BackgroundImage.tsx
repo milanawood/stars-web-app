@@ -1,26 +1,15 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 
-interface BackgroundImageProps {
-  width: string;
-  height: string;
-  className?: string;
-  style?: React.CSSProperties;
-  src: string;
-  alt: string;
-}
-
-const BackgroundImage: React.FC<BackgroundImageProps> = ({ className, style, src, alt }) => {
-  return (
-    <Image
-      className={className}
-      style={style}
-      src={src}
-      alt={alt}
-      fill
-      object-fit='cover'
-    />
-  );
-};
+const BackgroundImage: React.FC = () => (
+  <Image
+    src="/images/background-transparent.png"
+    alt="Background"
+    fill
+    className="fixed w-full h-[100vh] top-0 left-0 mix-blend-multiply"
+  />
+);
 
 export default BackgroundImage;
