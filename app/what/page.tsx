@@ -7,11 +7,6 @@ const What = () => {
   return (
     <>
       <BackgroundImage
-        src="/images/background-transparent.png"
-        width="100%"
-        height="100%"
-        alt="Background"
-        className="fixed mix-blend-multiply z-0 w-screen h-screen top-0 left-0 pointer-events-none select-none"
       />
       <div className="relative max-w-[1600px] m-auto">
         <div className="h-[600px] overflow-hidden relative w-full 800:h-screen 800:max-h-[900px]">
