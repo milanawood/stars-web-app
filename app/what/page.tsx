@@ -6,8 +6,7 @@ import BackgroundImage from "../components/BackgroundImage";
 const What = () => {
   return (
     <>
-      <BackgroundImage
-      />
+      <BackgroundImage className="absolute top-0 left-0 w-full h-full mix-blend-multiply" width={''} height={''} src={'/images/background-transparent.png'} alt={''}      />
       <div className="relative max-w-[1600px] m-auto">
         <div className="h-[600px] overflow-hidden relative w-full 800:h-screen 800:max-h-[900px]">
           <div className="relative flex items-center justify-center h-full z-10 p-8 800:p-12"  style={{ backgroundColor: 'rgb(30, 241, 221)' }}>

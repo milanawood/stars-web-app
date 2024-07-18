@@ -9,7 +9,7 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ className, src, alt = 'logo' }) => {
   return (
-    <Image className={className} src={src} alt={alt} width={300} height={80} />
+    <Image className={className} src={src} alt={alt} fill object-fit='cover' />
   );
 };
 

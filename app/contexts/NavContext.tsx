@@ -26,7 +26,6 @@ const NavProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     ],
     socialLinks: [
       { _key: '1', url: 'https://instagram.com', title: 'Instagram' },
-      { _key: '2', url: 'https://twitter.com', title: 'Twitter' },
     ],
   };
 

@@ -13,7 +13,7 @@ import BackgroundImage from './components/BackgroundImage';
 export default function Home() {
   return (
     <>
-{      <BackgroundImage width="100%" height="100%" src="/images/background-transparent.png" alt="Background" className="bg-amber-50 mix-blend-multiply z-0 object-cover h-js-height" />
+{      <BackgroundImage className="bg-amber-50 mix-blend-multiply z-0 object-cover h-js-height" width={''} height={''} src={''} alt={''} />
 }      <NavBar />
       <div className="w-full is-wheel-dragging h-screen fixed top-0 left-0">
         <EmblaCarousel>

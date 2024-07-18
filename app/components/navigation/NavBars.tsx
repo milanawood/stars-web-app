@@ -22,10 +22,17 @@ const NavBar: React.FC = () => {
           <Image src="/images/background-transparent.png" alt="background pattern" layout="fill" objectFit="cover" />
         </div>
       )}
-      <header className="bg-offwhite 800:bg-transparent fixed grid grid-cols-12 gap-6 items-center justify-between w-full p-2 px-2.5 top-0 left-0 z-30">
+      <header className="bg-offwhite 800:bg-transparent fixed grid grid-cols-12 gap-6 items-center justify-between w-full p-0.5 px-2.5 top-0 left-0 z-30" style={{ maxHeight: '62px' }}>
         <div className="col-span-12 text-center 800:col-span-2 inline-flex justify-center items-center z-20">
-          <a href="/" className="relative top-[1px] w-full max-w-[120px] 800:max-w-[220px] inline-block">
-            <Image src={`/images/logo-${logo}.png`} alt="logo" width={300} height={300} />
+          <a href="/" className="relative w-full max-w-[120px] 800:max-w-[220px] inline-block">
+            <Image
+              src={`/images/logo-${logo}.png`}
+              alt="logo"
+              style={{ mixBlendMode: 'multiply', width: '100%', height: 'auto' }}
+              width={300}
+              height={300}
+              className="h-full max-h-[60px] object-contain z-20"
+            />
           </a>
         </div>
         <div className="hidden col-span-10 1000:col-span-8 800:flex justify-center">
@@ -42,19 +49,21 @@ const NavBar: React.FC = () => {
             <Image
               src="/images/burger-menu-icon.png"
               alt="Menu"
+              style={{ width: '100%', height: 'auto' }}
               width={45}
               height={45}
             />
           </a>
           {isNavOpen && (
-            <div className="800:hidden fixed h-[calc(100vh-50px)] top-32 left-0 w-full bg-offwhite px-12 pt-5">
+            <div className="800:hidden fixed h-[calc(100vh-50px)] top-60px left-0 w-full bg-offwhite px-12 pt-5">
               <Image
-                width="320"
-                height="320"
                 className="absolute -right-[100px] top-[150px]"
-                style={{ mixBlendMode: 'multiply' }}
+                style={{ mixBlendMode: 'multiply', width: '50%',
+                height: 'auto' }}
                 src="/images/spinning-logo.png"
                 alt="Smiley Face with star eyes footer"
+                width={150}
+                height={150}
               />
               <div className="my-8 uppercase border-sky-700 text-left block no-underline pb-2 text-sky-700 font-termina font-extrabold text-3xl leading-relaxed 800:text-16 800:font-termina border-b border-dotted last:border-b-0 800:rounded-[20px] 800:px-4 800:border-0 800:py-1 800:leading-26 800:hover:bg-sky-700 800:hover:text-offwhite">
                   <NavLink path="/about" name="WHO" onClick={toggleNav} />

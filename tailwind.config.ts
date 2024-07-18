@@ -8,9 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      mixBlendMode: {
-        'multiply': 'multiply',
-      },
       colors: {
         offblack: '#333',
         offwhite: '#f5f5f5',
@@ -24,7 +21,7 @@ const config: Config = {
       },
       screens: {
         '800': '800px',
-        '1000': '1000px'
+        '1000': '1000px',
       },
       height: {
         'js-height': '851px',
@@ -68,7 +65,6 @@ const config: Config = {
         rock: 'rock 1s infinite',
         shake: 'shake 0.5s infinite',
         spin: 'spin 2s linear infinite',
-        vmarquee: 'vmarquee 10s linear infinite'
       },
     },
   },
