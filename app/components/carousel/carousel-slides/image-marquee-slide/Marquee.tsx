@@ -16,7 +16,7 @@ const Marquee: React.FC<MarqueeProps> = ({ children }) => {
   }, []);
 
   return (
-    <div className="embla_slide js-height relative w-full h-full overflow-hidden marquee-container">
+    <div className="embla_slide js-height relative w-full h-full overflow-hidden marquee-containe flex pause-animationr">
       <div className="marquee-content absolute top-0 left-0 w-full h-full flex items-center">
         <div ref={marqueeRef} className="flex items-center">
           {children}

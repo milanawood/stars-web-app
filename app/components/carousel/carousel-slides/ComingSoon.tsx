@@ -7,7 +7,14 @@ const ComingSoon: React.FC = () => {
     <div className="embla__slide js-height mt-[60px] h-mobile-screen  h-[calc(100vh-60px)] 800:h-screen 800:mt-0 w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]">
       <div className="w-full h-full top-0">
         <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none burger-button">
-          <Image src="/images/burger-eye-smiley-3.png" alt="STARS® burger icon" width={80} height={80} className="w-20 h-auto animate-rock" />
+          <Image 
+          src="/images/burger-eye-smiley-3.png" 
+          alt="STARS® burger icon"
+          width={150}
+          height={150}
+          className="animate-rock" 
+          style={{ width: '50%', height: 'auto' }}
+          />
         </div>
         <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none m-0 peace-burger">
           <Image src="/images/stars-burger-character-5.png" alt="burger mascot peace sign" className="w-full h-auto animate-rock" width="100" height="175" />

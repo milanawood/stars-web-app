@@ -22,7 +22,11 @@ const Manifest: React.FC = () => {
           <Image src="/images/stickers-glasses.png" alt="Sticker Image" width={100} height={100} />
         </Sticker>
         <Sticker animationClass="animate-none" className="absolute top-[48%] left-[60%] 800:top-[54%] 800:left-[15%]">
-          <Image src="/images/polaroid-10.png" alt="polaroid of plant-based STARS® burger" width={275} height={275} />
+          <Image 
+          src="/images/polaroid-10.png" 
+          alt="polaroid of plant-based STARS® burger" 
+          width={275} 
+          height={275} />
         </Sticker>
       </div>
     </div>
