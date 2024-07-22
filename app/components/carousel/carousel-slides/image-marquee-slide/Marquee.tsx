@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { ReactNode, useEffect, useRef } from 'react';
 
 interface MarqueeProps {
@@ -16,8 +16,8 @@ const Marquee: React.FC<MarqueeProps> = ({ children }) => {
   }, []);
 
   return (
-    <div className="embla_slide js-height relative w-full h-full overflow-hidden marquee-containe flex pause-animationr">
-      <div className="marquee-content absolute top-0 left-0 w-full h-full flex items-center">
+    <div className="relative w-full h-full marquee-container">
+      <div className="marquee-content absolute top-0 left-0 h-full w-full flex items-center">
         <div ref={marqueeRef} className="flex items-center">
           {children}
         </div>

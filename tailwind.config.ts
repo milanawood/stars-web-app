@@ -28,7 +28,7 @@ const config: Config = {
         '1600': '1600px',
       },
       height: {
-        'js-height': '851px',
+        'js-height': '853px',
         'screen-800': '100vh',
         'mobile-screen': 'calc(100vh - 60px)',
       },
@@ -67,7 +67,7 @@ const config: Config = {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(-100%)' },
         },
-        marqyL: {
+        marqueeL: {
           '0%': { transform: 'translateZ(0)' },
           '100%': { transform: 'translate3d(-100%, 0, 0)' },
         },

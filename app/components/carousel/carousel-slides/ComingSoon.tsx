@@ -8,16 +8,21 @@ const ComingSoon: React.FC = () => {
       <div className="w-full h-full top-0">
         <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none burger-button">
           <Image 
-          src="/images/burger-eye-smiley-3.png" 
+          src="/images/stars-burger-character-5.png" 
           alt="STARS® burger icon"
           width={150}
           height={150}
           className="animate-rock" 
-          style={{ width: '50%', height: 'auto' }}
+          style={{ width: '50%', height: 'auto', margin: '0'}}
           />
         </div>
-        <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none m-0 peace-burger">
-          <Image src="/images/stars-burger-character-5.png" alt="burger mascot peace sign" className="w-full h-auto animate-rock" width="100" height="175" />
+        <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none m-0 peace-burger object-cover w-full h-full burger-eyes-soon">
+          <Image 
+          src="/images/burger-eye-smiley-3.png" 
+          alt="burger mascot peace sign" 
+          className="animate-spin" 
+          fill={true}
+          style={{ margin: '0' }} />
         </div>
         <div className="overflow-visible absolute select-none pointer-events-none w-full h-full top-0 left-0" style={{ backgroundColor: 'rgb(30, 241, 221)' }}>
           <Image src="/images/background-transparent.png" alt="texture background texture" layout='fill' objectFit='cover'  className="absolute w-full h-full object-cover object-center" style={{ mixBlendMode: 'multiply' }} />
@@ -26,7 +31,7 @@ const ComingSoon: React.FC = () => {
           <div className="flex items-center justify-center w-full h-full 800:h-screen">
             <div className="w-full p-8 800:p-[5vw] text-fontwhite">
               <div className="w-full text-left">
-                <h2 className="uppercase py-2 my-2 font-termina font-bold leading-76 text-[7vh] 800:text-[14vh] 800:leading-[80%] 1000:text-[15vh]">
+                <h2 className="uppercase py-2 my-2 font-termina font-bold text-[8vh] leading-76 800:text-[15vh] 800:leading-[80%] 1000:text-[16vh]">
                   Burgers<br />Coming<br /> <span className="text-stars">Soon</span><br />
                 </h2>
                 <div className="flex justify-center w-full">
@@ -40,8 +45,12 @@ const ComingSoon: React.FC = () => {
                       </span>
                     </button>
                   </p>
-                  <Sticker animationClass="animate-spin" style={{ top: '68%', left: '10%' }}>
-                 <Image src="/images/stickers-star-eyes-7.png" alt="Star eye retro smiley face" width="175" height="175" />
+                  <Sticker animationClass="animate-rock" style={{ top: '68%', left: '10%' }}>
+                 <Image 
+                 src="/images/stereo-sticker-7.png" 
+                 alt="Stars vintage stero boombox" 
+                 width="175" 
+                 height="175" />
                  </Sticker>
                 </div>
               </div>
