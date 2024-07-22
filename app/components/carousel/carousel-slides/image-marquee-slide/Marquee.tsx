@@ -16,8 +16,8 @@ const Marquee: React.FC<MarqueeProps> = ({ children }) => {
   }, []);
 
   return (
-    <div className="relative w-full h-full marquee-container">
-      <div className="marquee-content absolute top-0 left-0 h-full w-full flex items-center">
+    <div className="marquee-container h-js-height 800:h-mobile-screen">
+      <div className="marquee-content h-full flex items-center">
         <div ref={marqueeRef} className="flex items-center">
           {children}
         </div>

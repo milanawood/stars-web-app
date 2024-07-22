@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const ComingSoon: React.FC = () => {
   return (
-    <div className="embla__slide js-height mt-[60px] h-mobile-screen 800:h-screen 800:mt-0 w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]">
+    <div className="embla__slide h-js-height mt-[60px] 800:h-screen 800:mt-0 w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]">
       <div className="w-full h-full top-0">
         <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none burger-button">
           <Image 

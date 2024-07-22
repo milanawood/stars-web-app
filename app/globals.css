@@ -39,6 +39,15 @@
 }
 
 @layer utilities {
+  @keyframes container {
+    0% { 
+      transform: translateX(-252px); 
+    }
+    100% {
+      transform: translateZ(0px);
+    }
+  }
+  
   @keyframes marquee {
     0% {
       transform: translateX(100%);
@@ -340,6 +349,7 @@
   -webkit-tap-highlight-color: transparent;
   margin-left: -10px;
 }
+
 
 .embla__slide {
   position: relative;
