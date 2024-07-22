@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const MarqueeSlide: React.FC = () => {
   return (
-    <div className="embla__slide js-height mt-[60px] h-mobile-screen  h-[calc(100vh-60px)] 800:h-screen 800:mt-0 w-screen 1000:min-w-[66vh] 1000:max-w-[66vh]">
+    <div className="embla__slide js-height mt-[60px] h-mobile-screen 800:h-screen 800:mt-0 w-screen 1000:min-w-[66vh] 1000:max-w-[66vh]">
       <div className="w-full overflow-hidden h-full top-0 relative">
         <div className="image w-full  absolute pointer-events-none shadow-carousel h-full top-0 left-0 bg-orange-200">
           <Image
