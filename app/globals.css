@@ -19,6 +19,10 @@
     cursor: pointer;
   }
 
+  .text-outline {
+    -webkit-text-stroke: 2px red;
+  }
+
   .placeholder\:text-offwhite::-moz-placeholder {
     --tw-text-opacity: 1;
     color: rgb(255 255 230 / var(--tw-text-opacity));
@@ -47,7 +51,7 @@
       transform: translateZ(0px);
     }
   }
-  
+
   @keyframes marquee {
     0% {
       transform: translateX(100%);

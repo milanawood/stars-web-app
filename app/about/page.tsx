@@ -1,70 +1,209 @@
 import React from "react";
 import Image from "next/image";
+import BackgroundImage from "../components/BackgroundImage";
+import Sticker from "../components/Sticker";
 
 const Who: React.FC = () => {
   return (
-    <div className="min-h-screen relative">
-      <Image
-        src="/images/background-transparent.png"
-        layout="fill"
-        objectFit="cover"
-        alt="Background"
-        className="absolute top-0 left-0 w-full h-full mix-blend-multiply"
-      />
-      <div className="relative z-10 max-w-[1600px] mx-auto">
-        <div className="mt-[60px] 800:mt-0 overflow-hidden relative bg-stars bg-opacity-75">
-          <div className="max-w-[1600px] relative m-auto z-20 overflow-visible items-center justify-center">
-            <div className="absolute pointer-events-none select-none h-auto top-5 transform translate-y-[-5%] right-[-40%] w-80%">
-              <Image
-                src="/images/stars-hat-6.png"
-                alt="stars cap Sticker"
-                layout="responsive"
-                width={721}
-                height={717}
-                className="who-top w-auto mix-blend-multiply"
-              />
-            </div>
-            <div className="h-[600px] overflow-hidden relative w-full 1000:min-h-[600px] 1000:max-h-[700px] 1200:h-screen 1200:min-h-[800px] 1200:max-h-[900px]">
-              <div className="relative flex justify-center h-full z-20 header-shadows">
-                <div className="h-full w-full flex justify-center absolute top-0 left-0">
-                  <div className="text-center mt-20 800:mt-44 max-w-1200">
-                    <h2 className="w-[80%] header-shadows m-auto font-termina font-extrabold uppercase leading-61 text-4xl 800:text-4xl 800:w-[100%] 800:leading-80 1200:text-4xl 1200:leading-108">
-                      Adventure Loving burger people
-                    </h2>
+    <>
+      <div className="">
+        <BackgroundImage className="bg-amber-50 mix-blend-multiply z-0 object-cover h-js-height" width={''} height={''} src={''} alt={''} />
+        <div className="min-h-screen">
+          <div className="min-h-screen overflow-hidden">
+            <div className="mt-[60px] 800:mt-0"></div>
+            <div className="relative z-20">
+              <div className="relative">
+                <div className="px-12 max-w-[1200px] py-4 800:py-14 m-auto relative">
+                  <Sticker className="z-[14] overflow-visible  items-center justify-center absolute pointer-events-none select-none m-0" animationClass="animate-rock" style={{ top: '68%', left: '10%' }}>
+                    <Image
+                      src="/images/stereo-sticker-7.png"
+                      alt="Stars vintage stero boombox"
+                      width="175"
+                      height="175"
+                      className="w-full  overflow-visible" />
+                  </Sticker>
+                  <div className="grid grid-cols-12 800:gap-8">
+                    <div className="col-span-12 800:col-span-6">
+                      <div className="w-full">
+                        <h2 className="text-50 leading-39 uppercase my-1 py-1 800:my-2 800:py-2 font-termina  font-extrabold 800:text-60 800:leading-60  1000:text-100 1000:leading-78 ">
+                          Great vibes, great food, great planet.</h2>
+                        <p className="text-16 800:text-26 800:leading-34 1000:text-32 -tracking-02 1000:leading-44 font-termina">creating the worlds first patty based on whole food ingredients</p>
+                      </div>
+                    </div>
                   </div>
+                </div>
+              </div>
+              <div className="relative 800:py-6">
+                <div className="px-5 max-w-[1200px] py-10 relative m-auto">
+                  <Sticker className="z-[14] overflow-visible  items-center justify-center absolute pointer-events-none select-none m-0" animationClass="animate-rock" style={{ top: '50%', left: '50%' }}>
+                    <Image
+                      src="/images/stereo-sticker-7.png"
+                      alt="Stars vintage stero boombox"
+                      width="175"
+                      height="175"
+                      className="w-full  overflow-visible" />
+                  </Sticker>
+                </div>
+                <Sticker className="z-[14] overflow-visible  items-center justify-center absolute pointer-events-none select-none m-0" animationClass="animate-rock" style={{ top: '20', left: '80%' }}>
+                  <Image
+                    src="/images/stereo-sticker-7.png"
+                    alt="Stars vintage stero boombox"
+                    width="175"
+                    height="175"
+                    className="w-full  overflow-visible" />
+                </Sticker>
+              </div>
+              <div className="w-full h-[30px] h-auto"></div>
+              <div className="w-full h-full">
+                <div className="relative bg-emerald-400 bg-opacity-50">
+                  <div className="marquee-container flex items-center w-full">
+                    <div className="marquee-content animate-marqueeL" style={{ animationDuration: "10s", animationDirection: "left" }}>
+                      <div className="marquee-item flex">
+                        <h3 className="uppercase mx-1 800:mx-2 font-termina relative -top-1 text-36 800:text-86 leading-80 text-stars font-extrabold">
+                          Coming to a shack near you</h3>
+                        <Image
+                          className="mx-1 800:mx-2 relative -top-1 leading-80"
+                          src={"/images/star-red.png"}
+                          width={100}
+                          height={100}
+                          alt={"off white star"}
+                        />
+                        <h3 className="uppercase mx-1 800:mx-2 font-termina relative -top-1 text-36 800:text-86 leading-80 text-transparent text-outline font-extrabold">
+                          Coming to a shack near you
+                        </h3>
+                        <Image
+                          className="mx-1 800:mx-2 relative -top-1 leading-80"
+                          src={"/images/star-red.png"}
+                          width={100}
+                          height={100}
+                          alt={"off white star"}
+                        />
+                        <h3 className="uppercase mx-1 800:mx-2 font-termina relative -top-1 text-36 800:text-86 leading-80 text-stars font-extrabold">
+                          Coming to a shack near you</h3>
+                        <Image
+                          className="mx-1 800:mx-2 relative -top-1 leading-80"
+                          src={"/images/star-red.png"}
+                          width={100}
+                          height={100}
+                          alt={"off white star"}
+                        />
+                        <h3 className="uppercase mx-1 800:mx-2 font-termina relative -top-1 text-36 800:text-86 leading-80 text-transparent text-outline font-extrabold">
+                          Coming to a shack near you
+                        </h3>
+                        <Image
+                          className="mx-1 800:mx-2 relative -top-1 leading-80"
+                          src={"/images/star-red.png"}
+                          width={100}
+                          height={100}
+                          alt={"off white star"}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-stars w-full h-full px-8 py-6 800:py-14 top-0 relative">
+                <div className="max-w-[1100px] m-auto null">
+                  <div className="w-full">
+                    <h2 className="uppercase py-2 my-2 font-termina  font-bold text-78 leading-61 1000:text-100  1000:leading-82  1400:leading-80 1400:text-152">
+                      adventurers unite</h2>
+                    <p className="text-16 800:text-26 800:leading-34 1000:text-32 -tracking-02 1000:leading-44 font-termina">
+                      need to add text here.</p>
+                    <p className="text-16 800:text-26 800:leading-34 1000:text-32 -tracking-02 1000:leading-44 font-termina"></p>
+                    <figure className="py-1 w-full inline">
+                      <div className="image w-full">
+                        <Image
+                          src={"/images/cool-vibes-sticker-4.png"}
+                          width={150}
+                          height={150}
+                          alt={"stars logo red"}
+                        />
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-stars w-full relative">
+                <div className="z-[14] overflow-visible  items-center justify-center  absolute pointer-events-none select-none">
+                  <Sticker animationClass="animate-rock" style={{ top: '24%', left: '12%' }}>
+                    <Image
+                      src="/images/spinning-logo-3.png"
+                      alt="Stars vintage stero boombox"
+                      width="175"
+                      height="175"
+                      className="w-full  overflow-visible" />
+                  </Sticker>
+                </div>
+                <div className="relative z-[2]">
+                  <div className="">
+                    {/*<div className="w-full">
+                      <div className="relative pb-80">
+                        <Image
+                          src="/images/spinning-logo-3.png"
+                          alt="Stars vintage stero boombox"
+                          width={10}
+                          height={10}
+                          className="w-full  overflow-visible" />
+                      </div>
+  </div> */}
+                    <div className="text-center w-full">
+                      <p className="text-17 leading-23 800:text-26 800:leading-38 1000:leading-46 1000:text-34 max-w-[650px] p-4 m-auto font-nobell">…and more text.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute w-full bottom-0 h-1/2 bg-yellow-100"></div>
+              </div>
+              <div className="relative">
+                <div className="px-12 max-w-[1200px] py-4 800:py-14 m-auto relative">
+                  <div className="z-[14] overflow-visible  items-center justify-center  absolute pointer-events-none select-none m-0">
+                    <Sticker animationClass="animate-spin" style={{ top: '83%', right: '-3%' }}>
+                      <Image
+                        src="/images/stereo-sticker-7.png"
+                        alt="Stars vintage stero boombox"
+                        width="175"
+                        height="175"
+                        className="w-full overflow-visible" />
+                    </Sticker>
+                  </div>
+                  <div className="z-[14] overflow-visible  items-center justify-center  absolute pointer-events-none select-none m-0">
+                    <Sticker animationClass="animate-spin" style={{ top: '57%', right: '-5%' }}>
+                      <Image
+                        src="/images/stereo-sticker-7.png"
+                        alt="Stars vintage stero boombox"
+                        width="175"
+                        height="175"
+                        className="w-full overflow-visible" />
+                    </Sticker>
+                  </div>
+                  <div className="grid grid-cols-12 800:gap-8">
+                    <div className="col-span-12 800:col-span-6">
+                      <div className="w-full">
+                        <h2 className="text-50 leading-39 uppercase my-1 py-1 800:my-2 800:py-2 font-termina  800:text-60 800:leading-60  1000:text-100 1000:leading-78 ">SUSTAINABLE VIBES <span className="text-stars">Sustainable future</span>
+                        </h2>
+                        <p className="text-16 800:text-26 800:leading-34 1000:text-32 -tracking-02 1000:leading-44 font-termina font-extrabold">more about the team. 
+                        </p>
+                      </div>
+                    </div>
+                    <div className="col-span-12 800:col-span-6">
+                        <div className="w-full">
+                          <div className="w-full relative border-[4px] border-green border-solid">
+                            <Image
+                              src={ '/images/polaroid-2-10.png' }
+                              alt={ 'polaroid' }
+                              fill
+                              className="block p-5 absolute w-full h-full object-fit" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="relative z-20 mt-[-320px] 500:mt-[-320px] 1200:mt-[-450px] px-8">
-            <div className="max-w-[1200px] mx-auto border border-solid border-black rounded-[20px] overflow-hidden relative">
-              <Image
-                src="/images/about-polaroids-large.png"
-                alt="Polaroid Collage"
-                layout="fill"
-                objectFit="cover"
-                className="block w-full h-full"
-              />
-            </div>
-            <div className="absolute inset-0 flex flex-col items-end justify-between px-10 800:pr-[50px] 1300:pr-[20px]">
-              {[
-                "STARS® is a food tech start up, based in the UK, Australia and North America.  STARS® was founded and is run by Adam Thorpe, a UK based entrepreneur. ",
-                "The UK companies are engaged in a joint research program with the University of Leeds to develop a delicious plant-based patty made using sustainably regionally grown whole foods, matching the taste, texture and aroma of beef along with matching price parity within a decade. This is being led by Dr Alan Hernandez Alvarez, a recognised global expert in plant-based protein.",
-                "STARS® is also hiring under its intern program from the University of Leeds within the following talent clusters; branding, content creation, food and events.",
-                "STARS® Australia is looking for its 1st STARS® location in Byron Bay to create a hub for the surf community. As STARS® looks to serve communities in Australia we acknowledge and are grateful to create an organisation within Bundjalung Nation of the Arakwal People or Mob. We respect them, their spiritual places, beliefs, cultural heritage and deep roots and connection to Country, dating back thousands of years. Whilst we learn more of the Arakwal people and County they belong, we seek to engage with their Elders and take their past forward with our future.",
-                "STARS® is a vibe, an approach to life and having a great time for the surfers, skaters, boarders and bikers. The dreamers, the creators, movers and shakers!  We are about having an awesome time in the natural environment of the waves, beach, mountain and trails. ",
-              ].map((text, index) => (
-                <div key={index} className="flex-grow h-full p-4">
-                  <div className="bg-offwhite p-2 border border-solid border-black max-w-[500px] w-full">
-                    <p className="text-15 leading-16 800:text-19 800:leading-21 font-nobell">{text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
