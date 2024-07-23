@@ -59,6 +59,11 @@ const config: Config = {
         '800px': '800px',
         '90vh': '90vh',
       },
+      transform: {
+        'translate-y-[-19%]': 'translateY(-19%)',
+        'translate-y-[-30%]': 'translateY(-30%)',
+        'translate-y-[-38%]': 'translateY(-38%)',
+      },
       backgroundImage: {
         "hero-pattern": "url('/images/background-transparent.png')",
       },

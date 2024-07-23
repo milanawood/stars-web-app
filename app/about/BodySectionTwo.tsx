@@ -1,0 +1,80 @@
+import React from 'react';
+import Image from 'next/image';
+
+interface BodySectionTwoProps {
+  heading: string;
+  subheading: string;
+  stickers: {
+    src: string;
+    alt: string;
+    style: React.CSSProperties;
+    className: string;
+  }[];
+  images: {
+    src: string;
+    alt: string;
+    style: React.CSSProperties;
+    className: string;
+  }[];
+}
+
+const BodySectionTwo: React.FC<BodySectionTwoProps> = ({ heading, subheading, stickers, images }) => {
+  return (
+    <div className="relative 800:py-6">
+      <div className="px-5 max-w-[1200px] py-10 relative m-auto">
+        {stickers.map((sticker, index) => (
+          <div
+            key={index}
+            className={`z-[14] overflow-visible items-center justify-center absolute pointer-events-none select-none ${sticker.className}`}
+            style={sticker.style}
+          >
+            <div className="image w-full overflow-visible" style={{ height: 0, paddingBottom: '75%' }}>
+              <Image
+                src={sticker.src}
+                alt={sticker.alt}
+                width={500}
+                height={500}
+                className="animate-null overflow-visible"
+              />
+            </div>
+          </div>
+        ))}
+        <div className="w-full">
+          <div className="flex w-full justify-end">
+            <div className="w-[80%]">
+              <div className="w-full relative rounded-[10px]" style={{ height: 0, paddingBottom: '52.67%' }}>
+                <Image
+                  src={images[0].src}
+                  alt={images[0].alt}
+                  fill
+                  className="block absolute w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="flex w-full justify-end">
+            <div className="w-[50%]">
+              <p className="text-16 800:text-26 800:leading-34 1000:text-32 tracking-02 1000:leading-44 font-termina font-extrabold">
+                {subheading}
+              </p>
+            </div>
+          </div>
+          <div className="flex w-full justify-center">
+            <div className="w-[70%]">
+              <div className="w-full relative rounded-[10px]" style={{ height: 0, paddingBottom: '58.25%' }}>
+                <Image
+                  src={images[1].src}
+                  alt={images[1].alt}
+                  fill
+                  className="block absolute w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BodySectionTwo;
