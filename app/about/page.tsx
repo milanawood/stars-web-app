@@ -16,31 +16,31 @@ const Who: React.FC = () => {
     {
       src: "/images/cap.png",
       alt: "Stars trucker hat",
-      className: 'right-[-5%] w-[200px] top-[-5%] translate-y-neg-5 800:top-[-10%] 800:translate-y-neg-10 800:right-[-15%] 800:w-[33%] 1200:top-[-10%] 1200:translate-y-neg-10 1200:right-[-5%] 1200:w-[33%]',
+      className: 'h-0 pb-[85%] right-[-5%] w-[200px] top-[-5%] translate-y-neg-5 800:top-[-10%] 800:translate-y-neg-10 800:right-[-15%] 800:w-[33%] 1200:top-[-10%] 1200:translate-y-neg-10 1200:right-[-5%] 1200:w-[33%]',
       animationClass: 'animate-none'
     },
     {
       src: "/images/stereo-sticker-7.png",
       alt: "STARS® retro stereo boombox",
-      className: 'left-[30%] w-[30%] top-[91.1%] translate-y-neg-91.1 bottom-[0] 600:left-[30%] 600:bottom-[-7%] 600:w-[25%] 800:top-[92%] 800:translate-y-neg-92 800:w-[21%] 1200:top-[90%] 1200:translate-y-neg-90 1200:left-[30%] 1200:w-[17%]',
+      className: 'absolute h-0 pb-[50%] left-[30%] w-[30%] top-[91.1%] translate-y-neg-91.1 bottom-[0] 600:left-[30%] 600:bottom-[-7%] 600:w-[25%] 800:top-[92%] 800:translate-y-neg-92 800:w-[21%] 1200:top-[90%] 1200:translate-y-neg-90 1200:left-[30%] 1200:w-[17%]',
       animationClass: 'animate-tilt'
     },
     {
       src: "/images/burger-eyes.png",
       alt: "cool vibes STARS® smiley",
-      className: 'top-[17%] translate-y-neg-17 left-[0%] w-[25%] 800:top-[27%] 800:top-[27%] 800:translate-y-neg-27 800:left-[0%] 800:w-[17%] 1200:top-[30%] 1200:translate-y-neg-30 1200:left-[6%] w-[15%]',
+      className: 'h-0 pb-[43%] top-[17%] translate-y-neg-17 left-[0%] w-[25%] 800:top-[27%] 800:top-[27%] 800:translate-y-neg-27 800:left-[0%] 800:w-[17%] 1200:top-[30%] 1200:translate-y-neg-30 1200:left-[6%] w-[15%]',
       animationClass: 'animate-rotate'
     },
     {
       src: "/images/cool-vibes-sticker-4.png",
       alt: "STARS® cool vibes only blue smiley sticker",
-      className: 'top-[75%] left-[71%] bottom-[15%] w-[30%] translate-y-neg-75 rotate-[-35deg] 600:top-[60%] 600:translate-y-neg-60 600:rotate-[-30deg] 600:left-[70%] 600:bottom-[20%] 600:w-[25%] 800:top-[82%] 800:translate-y-neg-82 800:rotate-[-35deg] 800:left-[78%] 800:bottom-[0%] 800:w-[20%]',
+      className: 'h-0 pb-[83%] top-[75%] left-[71%] bottom-[15%] w-[30%] translate-y-neg-75 rotate-[-35deg] 600:top-[60%] 600:translate-y-neg-60 600:rotate-[-30deg] 600:left-[70%] 600:bottom-[20%] 600:w-[25%] 800:top-[82%] 800:translate-y-neg-82 800:rotate-[-35deg] 800:left-[78%] 800:bottom-[0%] 800:w-[20%]',
       animationClass: 'animate-skew'
     },
     {
       src: "/images/star-red.png",
       alt: "STARS® red star icon",
-      className: 'left-[-20%] bottom-[15%] w-[58%] transform 600:left-[20%] 600:bottom-[15%] 600:w-[50%] 800:left-[-5%] 800:bottom-[15%] 800:w-[34%]',
+      className: 'h-0 pb-[]left-[-20%] bottom-[15%] w-[58%] transform 600:left-[20%] 600:bottom-[15%] 600:w-[50%] 800:left-[-5%] 800:bottom-[15%] 800:w-[34%]',
       animationClass: 'animate-none'
     },
     {
@@ -117,33 +117,31 @@ const Who: React.FC = () => {
           subheading="based in the UK, Australia and North America."
         />
         <BodySectionTwo
-                heading="Meet the team."
+                heading="Meet the Dream Team Behind STARS®"
                 subheading="Abi Aspen Glencross."
                 stickers={[
                   {
-                    src: "/images/star-red.png",
-                    alt: "Burger Smiley",
-                    style: { top: '30%', transform: 'translateY(-30%)', left: '30px', width: '10%' },
-                    className: 'smileyBurger'
+                    src: "/images/abi-bio.png",
+                    alt: "STARS® CTO Abi Aspen Glencross",
+                    className: 'top-[30%] left-[30px] w-[40%] translate-y-neg-30 800:left-[5%] 800:top-[38%] 800:w-[35%] 1200:top-[38%] 1200:translate-y-neg-38 1200:left-[5%] 1200:w-[450px]',
+                    animationClass: 'animate-none'
                   },
                   {
-                    src: "/images/logo-pink.png",
-                    alt: "Sticker",
-                    style: { top: '0%', transform: 'translateY(0%)', left: '-3%', width: '30%' },
-                    className: 'bodytwosticker'
+                    src: "/images/star-red.png",
+                    alt: "STARS® red star icon",
+                    className: 'top-[0%] translate-y-neg-0 w-[50%] left-[-3%] 800:top-[20%] 800:w-[340px] 800:translate-y-neg-20 800:left-[5%] 800:w-[340px] 1200:top-[19%] 1200:w-[300px] 1200:translate-y-neg-19 1200:left-[-5%]',
+                    animationClass: 'animate-none'
                   }
                 ]}
                 images={[
                   {
-                    src: "/images/polaroid-10.png",
-                    alt: "Sticker 1",
-                    style: {},
+                    src: "/images/alan-ruixian.png",
+                    alt: "Dr Alan Hernandez-Alvarexz and Ruixian Han",
                     className: 'bodytwostickertwo'
                   },
                   {
                     src: "/images/polaroid-2-10.png",
                     alt: "Sticker Four",
-                    style: {},
                     className: 'bodytwostickerfour'
                   }
                 ]}
