@@ -5,8 +5,8 @@ import Sticker from '../components/Sticker';
 interface StickerImage {
   src: string;
   alt: string;
-  style: React.CSSProperties;
   className: string;
+  animationClass: string;
 }
 
 interface HeroSectionProps {
@@ -24,7 +24,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage, mainImage, h
           <div className="w-full w-screen absolute h-full top-0 left-0" style={{ mixBlendMode: 'multiply' }}>
             <Image 
               src={backgroundImage}
-              className="w-screen object-cover object-center" 
+              className="w-screen object-cover object-center z-20" 
               alt="STARS® background"
               fill
             />
@@ -33,7 +33,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage, mainImage, h
         <div className="relative max-w-[1600px] m-auto">
           {stickerImages.map((sticker, index) => (
             <div key={index} className={`z-[14] overflow-visible items-center justify-center absolute pointer-events-none select-none m-0 ${sticker.className}`}>
-              <Sticker animationClass="animate-rock" style={sticker.style}>
+              <Sticker animationClass={sticker.animationClass}>
                 <Image src={sticker.src} alt={sticker.alt} width={500} height={175} />
               </Sticker>
             </div>
@@ -44,15 +44,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage, mainImage, h
                 <div className="relative w-[90%] h-[80%] max-w-[1200px]">
                   <Image 
                     src={mainImage}
-                    className="border opacity-75 border-black border-solid rounded-[10px] w-full h-full object-cover"
-                    alt="STARS® polaroid"
+                    className="border opacity-85 border-black border-solid rounded-[10px] w-full h-full object-cover z-20"
+                    alt="STARS® ocean water over sand slowly moving"
                     layout="fill"
                   />
                 </div>
               </div>
-              <div className="h-full w-full flex items-center justify-center z-20 absolute top-0 left-0 header-shadows 800:header-shadows">
+              <div className="h-full w-full flex items-center justify-center z-20 absolute top-0 left-0 text-fontwhite shadow-header 800:shadow-header-lg">
                 <div className="text-center m-auto max-w-1100">
-                  <h2 className="w-[60%] header-shadows m-auto font-termina font-extrabold uppercase leading-61 text-78 800:text-100 800:w-[80%] 800:leading-80 1000:text-152 1000:w-[70%]">
+                  <h2 className="w-[60%] header-shadows m-auto font-termina font-extrabold uppercase leading-61 text-4xl 800:text-5xl 800:w-[80%] 800:leading-80 1000:text-152 1000:w-[70%]">
                     {heading}
                   </h2>
                 </div>

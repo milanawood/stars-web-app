@@ -299,29 +299,6 @@
   }
 }
 
-.who-top {
-  top: 5%;
-  transform: translateY(-5%);
-  right: -40%;
-  width: 80%;
-}
-@media (min-width: 800px) {
-  .who-top {
-    top: -12%;
-    transform: translateY(-12%);
-    right: -30%;
-    width: 56vw;
-  }
-}
-@media (min-width: 1200px) {
-  .who-top {
-    top: -22%;
-    transform: translateY(-22%);
-    right: -26vw;
-    width: 740px;
-  }
-}
-
 .embla {
   position: relative;
   background-color: #f7f7f7;

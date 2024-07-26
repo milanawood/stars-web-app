@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        offblack: '#333',
+        offblack: '#1a1a1a',
         offwhite: '#f5f5f5',
         eggshell: '#f0ead6',
         stars: '#FF5858',
@@ -19,7 +19,12 @@ const config: Config = {
       fontFamily: {
         termina: ['"Termina"', 'sans-serif'],
       },
+      boxShadow: {
+        'header': '-4px 4px 0px #1a1a1a',
+        'header-lg': '-8px 8px 0px #1a1a1a',
+      },
       screens: {
+        '600': '600px',
         '800': '800px',
         '1000': '1000px',
         '1200': '1200px',
@@ -58,6 +63,21 @@ const config: Config = {
         '700px': '700px',
         '800px': '800px',
         '90vh': '90vh',
+      },
+      translate: {
+        'neg-5': '-5%',
+        'neg-10': '-10%',
+        'neg-17': '-17%',
+        'neg-27': '-27%',
+        'neg-30': '-30%',
+        'neg-38': '-38%',
+        'neg-43': '-43%',
+        'neg-60': '-60%',
+        'neg-75': '-75%',
+        'neg-82': '-82%',
+        'neg-90': '-90%',
+        'neg-91.1': '-91.1%',
+        'neg-92': '-92%',
       },
       transform: {
         'translate-y-[-19%]': 'translateY(-19%)',
@@ -119,6 +139,9 @@ const config: Config = {
         flashing1: 'flashing 3s ease-in-out infinite .2s',
         flashing2: 'flashing 3s ease-in-out infinite .4s',
       },
+    },
+    variants: {
+      boxShadow: ['responsive'],
     },
   },
   plugins: [],

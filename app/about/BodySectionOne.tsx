@@ -12,13 +12,13 @@ interface BodySectionOneProps {
 const BodySectionOne: React.FC<BodySectionOneProps> = ({ stickerSrc, stickerAlt, heading, subheading }) => {
   return (
     <div className="relative">
-      <div className="px-12 max-w-[1200px] py-4 800:py-14 m-auto relative" >
+      <div className="px-12 max-w-[1200px] py-4 800:py-14 m-auto relative">
         <Sticker
-          className="z-[14] overflow-visible items-center justify-center absolute pointer-events-none select-none m-0"
+          className="z-[14] overflow-visible items-center justify-center absolute pointer-events-none select-none m-0 translate-y-neg-43 left-[39%] w-[50%] bottom-[-19%]
+          600:left-[50%] 600:bottom-[-60%] 600:w-[40%] 800:top-[43%] 800:translate-y-neg-43 800:left-[44%] 800:w-[50%] "
           animationClass="animate-none"
-          style={{ top: '5%', transform: 'translateY(-43%)', left: '44%', width: '50%', bottom: '80%' }}
         >
-          <div className="image w-full overflow-visible" style={{ height: 100, paddingBottom: '75%' }}>
+          <div className="image w-full overflow-visible h-[100px] pb-[75%]">
             <Image
               src={stickerSrc}
               alt={stickerAlt}

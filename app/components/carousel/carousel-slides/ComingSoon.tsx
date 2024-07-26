@@ -25,7 +25,7 @@ const ComingSoon: React.FC = () => {
           style={{ margin: '0' }} />
         </div>
         <div className="overflow-visible absolute select-none pointer-events-none w-full h-full top-0 left-0" style={{ backgroundColor: 'rgb(30, 241, 221)' }}>
-          <Image src="/images/background-transparent.png" alt="texture background texture" layout='fill' objectFit='cover'  className="absolute w-full h-full object-cover object-center" style={{ mixBlendMode: 'multiply' }} />
+          <Image src="/images/background-transparent.png" alt="texture background texture" fill objectFit='cover'  className="absolute w-full h-full object-cover object-center" style={{ mixBlendMode: 'multiply' }} />
         </div>
         <div className="relative z-20 w-full h-full 800:h-screen top-0 left-0">
           <div className="flex items-center justify-center w-full h-full 800:h-screen">
