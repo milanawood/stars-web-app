@@ -1,19 +1,19 @@
 import React from 'react';
-import Sticker from '../../Sticker';
 import Image from 'next/image';
 
 const ComingSoon: React.FC = () => {
   return (
+    <div className="w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]">
     <div className="w-full h-full top-0">
       <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none 
                 top-[52%] translate-y-neg-52 right-[-20%] w-[75%] 
-                800:top-[51%] 800:translate-y-neg-52 800:right-[-4%] 800:w-[55%]">
+                800:top-[51%] 800:translate-y-neg-52 800:right-[-4%] 800:w-[55%] transform">
         <Image
           src="/images/stars-burger-character-5.png"
           alt="STARS® burger icon"
           width={500}
           height={500}
-          className="animate-rock w-[50%] h-auto m-0"
+          className="animate-rock w-[50%] h-auto m-0 overflow-visible"
         />
       </div>
 
@@ -55,6 +55,7 @@ const ComingSoon: React.FC = () => {
         </div>
       </div>
       <div className="absolute bottom-2 left-0 w-full 800:bottom-4 text-center text-stars"><span className="font-termina text-16 800:text-18">Coming to a shack near you!</span></div>
+    </div>
     </div>
   );
 };

@@ -170,8 +170,6 @@ const Who: React.FC = () => {
           'Coming to a shack near you',
         ]}
         imageSrc="/images/star-red.png"
-        animationDuration="10s"
-        animationDirection="left"
       />
       <BodySectionThree
         heading="Adventurers Unite"

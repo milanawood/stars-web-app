@@ -45,7 +45,7 @@
 @layer utilities {
   @keyframes container {
     0% { 
-      transform: translateX(-252px); 
+      transform: translateX(-36px); 
     }
     100% {
       transform: translateZ(0px);
@@ -213,16 +213,18 @@
     @apply flex w-full h-screen items-center overflow-visible;
   }
   .marquee-container {
-    @apply relative overflow-hidden pt-1 h-full flex;
+    @apply relative overflow-hidden h-full flex;
     animation: marqueeL linear infinite running;
   }
-  .marquee-content {
-    @apply flex flex-grow flex-shrink-0 basis-auto will-change-transform;
-    animation: marqueeL 16.5s infinite linear;
+  .marqueeContent {
+    @apply flex flex-[1_0_auto] will-change-transform;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
   }
 
-  .marquee-item {
-    @apply flex flex-grow-0 items-center h-full w-full mx-5;
+  .marqueeItem {
+    @apply flex-grow-0;
   }
 
   .header-shadows {
@@ -239,40 +241,6 @@
   }
 }
 
-.peace-burger,
-.burger-button,
-.who-top {
-  position: absolute;
-}
-
-/* Stickers */
-
-.burger-eyes-soon {
-  top: 8%;
-  transform: translateY(-8%);
-  right: 1%;
-  width: 32%;
-  height: 32%;
-}
-
-@media screen and (min-width: 400px) {
-  .burger-eyes-soon {
-    top: 50%;
-    transform: translateY(-7%);
-    right: 1%;
-    width: 30%;
-    height: 18%;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .burger-eyes-soon {
-    top: 8%;
-    transform: translateY(-8%);
-    right: 5%;
-    width: 15%;
-  }
-}
 
 
 .embla {
@@ -299,14 +267,6 @@
   display: block;
   content: "";
   clear: both;
-}
-
-.image {
-  width: 100%;
-}
-
-.image .w-auto {
-  width: auto;
 }
 
 .image img.press-image,

@@ -1,5 +1,6 @@
 "use client";
 import React, { ReactNode, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 interface MarqueeProps {
   children: ReactNode;
@@ -16,12 +17,29 @@ const Marquee: React.FC<MarqueeProps> = ({ children }) => {
   }, []);
 
   return (
-    <div className="marquee-container h-js-height 800:h-mobile-screen">
-      <div className="marquee-content h-full flex items-center">
+    <div className="marquee-container">
+          <div className="w-full overflow-hidden h-full top-0 relative">
+    <div className="absolute w-full h-full top-0 left-0 bg-[rgb(255,255,230)]">
+      <figure>
+        <div className="absolute pointer-events-none shadow-carousel w-full h-full top-0 left-0">
+          <Image
+            src="/images/wax-paper.png"
+            alt="background pattern"
+            fill
+            className="absolute object-center object-cover pointer-events-none shadow-carousel w-full h-full top-0 left-0 opacity-85"
+          />
+        </div>
+      </figure>
+    </div>
+    <div className="absolute left-0 top-0 z-10 flex items-center justify-center select-none pointer-events-none w-full h-full">
+      <div className="w-[80%] h-[80%] border-4 border-solid border-cyan-500"></div>
+    </div>
+      <div className="marqueeContent animate-marqueeL h-full w-full flex items-center">
         <div ref={marqueeRef} className="flex items-center">
           {children}
         </div>
       </div>
+    </div>
     </div>
   );
 };

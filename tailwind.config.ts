@@ -82,6 +82,7 @@ const config: Config = {
         'neg-20': '-20%',
         'neg-27': '-27%',
         'neg-30': '-30%',
+        'neg-36': '-36px',
         'neg-38': '-38%',
         'neg-43': '-43%',
         'neg-52': '-52%',
@@ -94,9 +95,11 @@ const config: Config = {
         'neg-custom-x': '-5585px',
       },
       transform: {
+        'translate-x-neg-36': 'translateX(-36px) translateZ(0px)',
         'translate-y-[-19%]': 'translateY(-19%)',
         'translate-y-[-30%]': 'translateY(-30%)',
         'translate-y-[-38%]': 'translateY(-38%)',
+        'translate-y-[-52%]': 'translateY(-52%)',
       },
       backgroundImage: {
         "hero-pattern": "url('/images/background-transparent.png')",
@@ -143,7 +146,7 @@ const config: Config = {
         },
       },
       animation: {
-        verticalMarquee: 'verticalMarquee 30s linear infinite',
+        marqueeL: 'marqueeL 17s linear infinite',
         marquee: 'marquee 30s linear infinite',
         rock: 'rock 1s infinite',
         shake: 'shake 0.5s infinite',
