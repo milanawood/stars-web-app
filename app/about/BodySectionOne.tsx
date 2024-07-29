@@ -18,7 +18,7 @@ const BodySectionOne: React.FC<BodySectionOneProps> = ({ stickerSrc, stickerAlt,
           600:left-[50%] 600:bottom-[-60%] 600:w-[40%] 800:top-[43%] 800:translate-y-neg-43 800:left-[44%] 800:w-[50%] "
           animationClass="animate-none"
         >
-          <div className="image w-full overflow-visible h-[100px] pb-[75%]">
+          <div className="image w-full overflow-visible h-[0] pb-[75%]">
             <Image
               src={stickerSrc}
               alt={stickerAlt}

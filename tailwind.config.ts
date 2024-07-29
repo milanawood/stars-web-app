@@ -19,9 +19,18 @@ const config: Config = {
       fontFamily: {
         termina: ['"Termina"', 'sans-serif'],
       },
+      extend: {
+        overflow: {
+          'scroll-touch': 'touch',
+        },
+        overscrollBehavior: {
+          'none': 'none',
+        }
+      },
       boxShadow: {
         'header': '-4px 4px 0px #1a1a1a',
         'header-lg': '-8px 8px 0px #1a1a1a',
+        'shadow-carousel': '2.43549px 2.43549px 2.43549px rgba(0, 0, 0, 0.35)',
       },
       screens: {
         '600': '600px',
@@ -33,7 +42,7 @@ const config: Config = {
         '1600': '1600px',
       },
       height: {
-        'js-height': '853px',
+        'js-height': '848px',
         'screen-800': '100vh',
         'mobile-screen': 'calc(100vh - 60px)',
       },
@@ -75,12 +84,14 @@ const config: Config = {
         'neg-30': '-30%',
         'neg-38': '-38%',
         'neg-43': '-43%',
+        'neg-52': '-52%',
         'neg-60': '-60%',
         'neg-75': '-75%',
         'neg-82': '-82%',
         'neg-90': '-90%',
         'neg-91': '-91%',
         'neg-92': '-92%',
+        'neg-custom-x': '-5585px',
       },
       transform: {
         'translate-y-[-19%]': 'translateY(-19%)',

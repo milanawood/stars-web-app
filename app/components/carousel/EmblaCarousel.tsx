@@ -34,8 +34,8 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ children }) => {
   }, [emblaApi, onScroll]);
 
   return (
-    <div className="embla w-full h-screen" ref={emblaRef}>
-      <div className="embla__container container flex flex-nowrap items-center overflow-visible w-[fit-content]">{children}</div>
+    <div className="embla w-full virtual-scroll bg-fontwhite h-screen fixed top-0 left-0" ref={emblaRef}>
+      <div className="embla__container container flex flex-nowrap items-center overflow-visible w-[fit-content] translate-neg-custom-x">{children}</div>
     </div>
   );
 };

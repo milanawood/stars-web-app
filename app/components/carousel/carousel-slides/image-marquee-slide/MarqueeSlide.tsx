@@ -5,11 +5,10 @@ import Image from 'next/image';
 
 const MarqueeSlide: React.FC = () => {
   return (
-    <div className="embla__slide h-js-height mt-[60px] 800:h-screen 800:mt-0 w-screen flex items-center justify-center">
-      <div className="w-full overflow-hidden h-full top-0 relative flex items-center justify-center">
-        <div className="absolute w-full h-full top-0 left-0" style={{ backgroundColor: 'rgb(255, 255, 230)' }}>
+      <div className="w-full overflow-hidden h-full top-0 relative">
+        <div className="absolute w-full h-full top-0 left-0 bg-[rgb(255,255,230)]">
           <figure>
-            <div className="image absolute pointer-events-none shadow-carousel w-full h-full top-0 left-0">
+            <div className="absolute pointer-events-none shadow-carousel w-full h-full top-0 left-0">
               <Image
                 src="/images/wax-paper.png"
                 alt="background pattern"
@@ -30,7 +29,6 @@ const MarqueeSlide: React.FC = () => {
           <MarqueeItem src="/images/20240513_130056795_iOS.png" alt="Item 5" />
         </Marquee>
       </div>
-    </div>
   );
 };
 
