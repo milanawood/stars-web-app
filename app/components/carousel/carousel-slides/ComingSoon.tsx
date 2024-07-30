@@ -3,11 +3,10 @@ import Image from 'next/image';
 
 const ComingSoon: React.FC = () => {
   return (
-    <div className="w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]">
     <div className="w-full h-full top-0">
       <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none 
                 top-[52%] translate-y-neg-52 right-[-20%] w-[75%] 
-                800:top-[51%] 800:translate-y-neg-52 800:right-[-4%] 800:w-[55%] transform">
+                800:top-[51%] 800:translate-y-neg-52 800:right-[-4%] 800:w-[45%] transform">
         <Image
           src="/images/stars-burger-character-5.png"
           alt="STARS® burger icon"
@@ -35,7 +34,7 @@ const ComingSoon: React.FC = () => {
         <div className="flex items-center justify-center w-full h-full 800:h-screen">
           <div className="w-full p-8 800:p-[5vw] text-fontwhite">
             <div className="w-full text-left">
-              <h2 className="uppercase py-2 my-2 font-termina font-bold text-[8vh] leading-76 800:text-[15vh] 800:leading-[80%] 1000:text-[16vh]">
+              <h2 className="uppercase py-2 my-2 font-termina font-bold text-7xl leading-76 800:text-7xl 800:leading-[80%] 1000:text-7xl">
                 Burgers<br />Coming<br /> <span className="text-stars">Soon</span><br />
               </h2>
               <div className="flex justify-center w-full">
@@ -55,7 +54,6 @@ const ComingSoon: React.FC = () => {
         </div>
       </div>
       <div className="absolute bottom-2 left-0 w-full 800:bottom-4 text-center text-stars"><span className="font-termina text-16 800:text-18">Coming to a shack near you!</span></div>
-    </div>
     </div>
   );
 };
