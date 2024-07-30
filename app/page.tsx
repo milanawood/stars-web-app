@@ -9,6 +9,10 @@ import MarqueeSlide from './components/carousel/carousel-slides/image-marquee-sl
 import BackgroundImage from './components/BackgroundImage';
 import Quest from './components/carousel/Quest';
 import VerticalSlide from './components/carousel/carousel-slides/vertical-marquee/VerticalSlide';
+import Burger from './components/carousel/Burger';
+import News from './components/carousel/carousel-slides/News';
+import Newsletter from './components/carousel/Newsletter';
+import Inspiration from './components/carousel/Inspiration';
 
 export default function Home() {
   return (
@@ -29,7 +33,25 @@ export default function Home() {
           <Slide className="w-[200vw] 800:w-auto 800:aspect-[calc(1805/1124)] relative">
             <Quest />
           </Slide>
-          <Slide className="hidden w-[76px]">
+          <Slide className="w-[76px]">
+            <VerticalSlide />
+          </Slide>
+          <Slide className='w-[200vw] 800:w-auto 800:aspect-[calc(1805/1124)] relative'>
+            <Burger />
+          </Slide>
+          <Slide className="w-[76px]">
+            <VerticalSlide />
+          </Slide>
+          <Slide className="w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]">
+            <News />
+          </Slide>
+          <Slide className="min-w-[100vw] w-screen 800:min-w-[560px] 1000:max-w-[700px]">
+            <Newsletter />
+          </Slide>
+          <Slide className="w-screen 1000:w-auto">
+            <Inspiration />
+          </Slide>
+          <Slide className="w-[76px]">
             <VerticalSlide />
           </Slide>
           <Slide className="w-[100vw] 800:w-auto 800:aspect-[calc(1920/1080)] relative">

@@ -14,19 +14,17 @@ const VerticalSlide = () => {
   useEffect(() => {
     const marquee = marqueeRef.current;
     if (marquee) {
-      let offset = 0;
-      const height = marquee.scrollHeight / 2;
       marquee.innerHTML += marquee.innerHTML; 
     }
   }, []);
 
   return (
-      <div className="transform rotate-180 h-screen select-none text-marquee pointer-events-none relative bg-stars">
-        <div className=" ">
-          <div className="flex h-screen w-full marqueeContent animate-marqueeL origin-top-left block w-[100vh] h-[50px] transform rotate-90" ref={marqueeRef}>
+      <div className="h-screen transform rotate-180 select-none pointer-events-none relative bg-green-300">
+        <div className="transform rotate-90 origin-center block w-[100vh] h-[50px]">
+          <div ref={marqueeRef} className="flex h-screen w-full animate-marqueeL">
             {items.map((item, index) => (
-              <div key={index} className=" flex-shrink-0 flex items-center mx-4">
-                <h3 className="uppercase my-1 mx-2 py-1 font-termina relative leading-none text-stars text-outline text-70">
+              <div key={index} className="flex-shrink-0 flex items-center mx-4">
+                <h3 className="uppercase my-1 mx-2 py-1 font-termina font-extrabold relative leading-none text-outline text-xl text-green-300">
                   {item}
                 </h3>
               </div>
