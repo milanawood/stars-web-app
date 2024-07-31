@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 const News: React.FC = () => {
   return (
-    <div className="w-full h-full top-0 relative">
+    <div className="w-full h-full top-0">
       <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none m-0 top-[23%] sm:top-[26%] md:top-[55%] left-[1%] sm:left-[4%] md:left-[5px] w-[200px] sm:w-[120px] md:w-[200px]">
         <Image
-          src="/images/burger-eye-smiley.png"
+          src="/images/burger-eyes.png"
           alt="Sticker 1"
           width={200}
           height={200}
@@ -33,22 +33,22 @@ const News: React.FC = () => {
           />
         </div>
       </div>
-      <div className="absolute select-none pointer-events-none h-full hidden md:block bottom-[-35%] left-[1%] right-[1%]">
+      <div className="absolute select-none pointer-events-none h-full bottom-[-35%] left-[1%] right-[1%] hidden md:block">
         <Image
-          src="/images/cool-vibes-sticker-4.png"
+          src="/images/abi-bio.png"
           alt="Large Sticker"
           layout="fill"
           objectFit="contain"
           objectPosition="center"
         />
       </div>
-      <div className="relative z-20 w-full h-full 800:h-screen top-0 left-0">
+      <div className="absolute z-20 w-full h-full 800:h-screen top-0 left-0">
         <div className="flex items-center justify-center w-full h-full 800:h-screen">
           <div className="w-full p-8 800:p-8 text-white">
             <p className="text-14 800:text-22 font-termina">
               <a
                 className="text-black text-18 800:text-22 relative uppercase max-w-[260px] 800:max-w-[310px] block rounded-full no-underline"
-                href="/"
+                href="/about"
               >
                 <svg
                   className="w-full max-w-[260px] 800:max-w-[310px] h-auto"
@@ -65,12 +65,26 @@ const News: React.FC = () => {
                   ></path>
                 </svg>
                 <span className="absolute z-10 text-center top-[2px] left-0 flex justify-center items-center font-termina w-full h-full">
-                  STARS® in the press!
+                  Meet the Team!
                 </span>
               </a>
             </p>
           </div>
         </div>
+      </div>
+      <div className="absolute inset-0 bg-transparent pointer-events-none select-none">
+        <figure className="select-none pointer-events-none">
+          <div className="image w-full h-full absolute top-0 left-0">
+            <Image
+              src="/images/meet-the-team.png"
+              alt="STARS® team with Adam Thorpe and Alan Hernandez Alvarez and Ruixian Han"
+              width={800}
+              height={800}
+              objectFit="contain"
+              objectPosition="center"
+            />
+          </div>
+        </figure>
       </div>
     </div>
   );

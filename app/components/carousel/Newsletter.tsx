@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 const Newsletter = () => {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full top-0">
       <div className="absolute inset-0 pointer-events-none shadow-carousel">
         <Image
           src="/images/wax-paper.png"
           alt="paper illustration"
-          layout="fill"
+          fill
           objectFit="cover"
           objectPosition="center"
         />

@@ -33,6 +33,7 @@ const config: Config = {
         'shadow-carousel': '2.43549px 2.43549px 2.43549px rgba(0, 0, 0, 0.35)',
       },
       screens: {
+        '400': '400px',
         '600': '600px',
         '800': '800px',
         '1000': '1000px',
@@ -45,6 +46,13 @@ const config: Config = {
         'js-height': '848px',
         'screen-800': '100vh',
         'mobile-screen': 'calc(100vh - 60px)',
+      },
+      width: {
+        'auto': 'auto',
+      },
+      aspectRatio: {
+        '1805/1124': 'calc(1805 / 1124)',
+        '1920/1080': 'calc(1920 / 1080)',
       },
       minWidth: {
         'full': '100vw',
@@ -92,7 +100,7 @@ const config: Config = {
         'neg-90': '-90%',
         'neg-91': '-91%',
         'neg-92': '-92%',
-        'neg-custom-x': '-5585px',
+        'neg-custom-x': '-15060.6px',
       },
       transform: {
         'translate-x-neg-36': 'translateX(-36px) translateZ(0px)',
@@ -159,6 +167,10 @@ const config: Config = {
     },
     variants: {
       boxShadow: ['responsive'],
+      extend: {
+        width: ['800'],
+        aspectRatio: ['800'],
+      },
     },
   },
   plugins: [],

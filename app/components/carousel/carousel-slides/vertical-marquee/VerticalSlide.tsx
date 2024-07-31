@@ -19,12 +19,12 @@ const VerticalSlide = () => {
   }, []);
 
   return (
-      <div className="h-screen transform rotate-180 select-none pointer-events-none relative bg-green-300">
-        <div className="transform rotate-90 origin-center block w-[100vh] h-[50px]">
-          <div ref={marqueeRef} className="flex h-screen w-full animate-marqueeL">
+      <div className="h-screen transform rotate-180 select-none text-marquee pointer-events-none relative bg-green-300">
+        <div className="transform rotate-90 origin-top-left block w-[100vh] h-[50px] translate-x-[92px] 800:translate-x-[100px]">
+          <div ref={marqueeRef} className="flex h-screen w-full pause-animation animate-marqueeL">
             {items.map((item, index) => (
-              <div key={index} className="flex-shrink-0 flex items-center mx-4">
-                <h3 className="uppercase my-1 mx-2 py-1 font-termina font-extrabold relative leading-none text-outline text-xl text-green-300">
+              <div key={index} className="marqueeContent">
+                <h3 className="marqueeItem uppercase my-1 mx-2 py-1 font-termina font-extrabold relative leading-none text-outline text-xl text-green-300">
                   {item}
                 </h3>
               </div>

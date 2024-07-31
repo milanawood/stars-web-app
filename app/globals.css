@@ -40,6 +40,8 @@
   .last\:border-b-0:last-child {
     border-bottom-width: 0;
   }
+
+
 }
 
 @layer utilities {
@@ -242,18 +244,40 @@
 }
 
 
-
 .embla {
-  @apply overflow-hidden;
+  overflow: hidden;
+  margin-left:auto;
+  margin-right:auto;
+  width: 100%; 
+  background-color: antiquewhite; 
+  height: 100vh; 
+  position: fixed; 
+  top: 0; 
+  left: 0;
 }
 
-.embla__container {
-  @apply flex;
+
+.embla__container{
+  display:flex;
+  margin-left: -10px;
+  flex-wrap: nowrap;
+  overflow: visible;
+  width: fit-content;
+  align-items: center;
 }
 
-.embla__slide {
- @apply flex flex-grow-0 flex-shrink-0 basis-full min-w-0;
+.embla__slide{
+  position: relative;
 }
+
+
+@media screen and (min-width: 768px) {
+  .embla__slide {
+    height:100vh;
+    margin-top: 0;
+  }
+}
+
 
 
 
@@ -280,7 +304,7 @@
 }
 
 .js-height {
-  @apply h-[853px];
+  @apply h-[848px];
 }
 
 @media (min-width: 800px) {

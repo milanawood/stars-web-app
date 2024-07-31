@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Inspiration: React.FC = () => {
     return (
-        <div className="relative w-full h-full">
-            <div className="absolute inset-0 bg-yellow-200"></div>
+        <div>
+            <div className="absolute w-full h-full top-0 left-0 bg-yellow-200"></div>
             <div className="mt-[-2%] 800:mt-[-1%]"></div>
             <div className="absolute w-full h-full top-0 left-0 flex items-center justify-center z-10">
                 <Image
@@ -30,7 +30,7 @@ const Inspiration: React.FC = () => {
                             </div>
                             <figure className="p-2 relative z-10 m-auto my-0 max-h-[20vh] max-w-[140px] 800:max-w-[180px]">
                                 <Image
-                                    src="/images/burger-eye-smiley.png"
+                                    src="/images/burger-eyes.png"
                                     alt="Drop"
                                     className="max-h-[20vh] object-contain"
                                     width={140}
@@ -55,7 +55,7 @@ const Inspiration: React.FC = () => {
                             </div>
                             <figure className="p-2 relative z-10 m-auto my-0 max-h-[20vh] max-w-[140px] 800:max-w-[180px]">
                                 <Image
-                                    src="/images/polaroid.png"
+                                    src="/images/polaroid-10.png"
                                     alt="burger polaroid"
                                     className="max-h-[20vh] object-contain"
                                     width={140}

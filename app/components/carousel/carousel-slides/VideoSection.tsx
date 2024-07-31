@@ -2,28 +2,46 @@
 import React, { useRef, useEffect } from 'react';
 
 const VideoSection: React.FC = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRefLarge = useRef<HTMLVideoElement>(null);
+  const videoRefSmall = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play();
+    if (videoRefLarge.current) {
+      videoRefLarge.current.play();
+    }
+    if (videoRefSmall.current) {
+      videoRefSmall.current.play();
     }
   }, []);
 
   return (
     <div className="w-screen h-screen relative">
-      <video
-        className="w-screen h-screen object-cover opacity-80"
-        loop
-        muted
-        autoPlay
-        playsInline
-        ref={videoRef}
-      >
-        <source src="/images/burger-video-large-1.mp4" type="video/mp4" media="(min-width: 800px)" />
-        <source src="/images/promo-video-2.mp4" type="video/mp4" media="(max-width: 799px)" />
-        Your browser does not support the video tag.
-      </video>
+      <div className="w-full m-0 p-0 hidden 800:block">
+        <video
+          className="w-full h-full object-cover opacity-80"
+          loop
+          muted
+          autoPlay
+          playsInline
+          ref={videoRefLarge}
+        >
+          <source src="/images/burger-video-large-1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div className="w-full m-0 p-0 block 800:hidden">
+        <video
+          className="w-full 800:js-height mt-[60px] h-mobile-screen object-cover opacity-80"
+          loop
+          muted
+          autoPlay
+          playsInline
+          ref={videoRefSmall}
+        >
+          <source src="/images/promo-video-2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   );
 };

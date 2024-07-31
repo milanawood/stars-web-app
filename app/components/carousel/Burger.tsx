@@ -4,13 +4,13 @@ import Sticker from '../Sticker';
 
 const Burger: React.FC = () => {
   return (
-    <div className="w-full h-full top-0 relative">
+    <div className="w-full h-full top-0">
       <Sticker className="absolute top-[50%] right-0 transform -translate-y-1/2 w-[240px]">
         <Image
           src="/images/about-polaroids.png"
           alt="Burger Polaroids"
-          width={600}
-          height={600}
+          width={700}
+          height={1000}
           className="object-cover"
         />
       </Sticker>
