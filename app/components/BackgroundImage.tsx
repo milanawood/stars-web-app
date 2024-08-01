@@ -12,9 +12,19 @@ interface BackgroundImageProps {
 
 const BackgroundImage: React.FC<BackgroundImageProps> = ({ className }) => {
   return (
-<div className="fixed w-full h-full top-0 left-0 opacity-60 select-none pointer-events-none z-0" style={{ mixBlendMode: 'multiply' }}>
-          <Image src="/images/background-transparent.png" alt="background pattern" fill objectFit="cover" />
-    </div>
+    <div className="absolute select-none pointer-events-none w-full h-full top-0 left-0 bg-yellow-50">
+    <figure>
+      <div className='absolute z-20 w-full h-full top-0 left-0'>
+        <Image src='/images/background-transparent.png'
+          alt='texture background'
+          fill
+          objectFit='cover'
+          objectPosition='center'
+          className='absolute w-full h-full object-cover object-center mix-blend-multiply'
+        />
+      </div>
+    </figure>
+  </div>
   );
 };
 

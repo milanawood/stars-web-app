@@ -8,7 +8,7 @@ const items = [
   "Coming to a shack near you!"
 ];
 
-const VerticalSlide = () => {
+const VerticalSlide: React.FC = () => {
   const marqueeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const VerticalSlide = () => {
           <div ref={marqueeRef} className="flex h-screen w-full pause-animation animate-marqueeL">
             {items.map((item, index) => (
               <div key={index} className="marqueeContent">
-                <h3 className="marqueeItem uppercase my-1 mx-2 py-1 font-termina font-extrabold relative leading-none text-outline text-xl text-green-300">
+                <h3 className="marqueeItem flex uppercase my-1 mx-2 py-1 font-termina font-extrabold relative leading-none text-outline text-xl text-green-300">
                   {item}
                 </h3>
               </div>

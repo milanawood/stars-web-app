@@ -1,27 +1,28 @@
 import React from 'react';
 import Image from 'next/image';
+import Sticker from '../../Sticker';
 
 const News: React.FC = () => {
   return (
     <div className="w-full h-full top-0">
-      <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none m-0 top-[23%] sm:top-[26%] md:top-[55%] left-[1%] sm:left-[4%] md:left-[5px] w-[200px] sm:w-[120px] md:w-[200px]">
+      <Sticker className="animate-skew 800:top-[55%] 800:transform 800:-translate-y-[55%] 800:left-[5px] 800:w-[200px] max-w-799:[top-23%] max-w-799:transform max-w-799:-translate-y-[23%] max-w-799:w-[200px] max-w-799:left-[1%] max-w-375:top-[26%] max-w-375:transform max-w-375:left-[4%] max-w-375:w-[120px]">
         <Image
-          src="/images/burger-eyes.png"
-          alt="Sticker 1"
-          width={200}
-          height={200}
-          className="animate-skew"
+          src="/images/logo-pink.png"
+          alt="STARS® logo pink"
+          width={1034}
+          height={675}
+          className="overflow-visible pb-[65%] w-full"
         />
-      </div>
-      <div className="absolute z-[14] overflow-visible items-center justify-center pointer-events-none select-none m-0 top-[52%] md:top-[52%] right-[1%] sm:bottom-[11%] md:right-[6%] w-[200px] sm:w-[180px]">
+      </Sticker>
+      <Sticker className="animate-rotate 800:top-[52%] 800:transform 800:-translate-y-[52%] 800:right-[6px] 800:w-[200px] max-w-799:right-[23%] max-w-799:transform max-w-799:bottom-[11%] max-w-799:w-[180px]">
         <Image
-          src="/images/burger-icon-circle.png"
-          alt="Sticker 2"
-          width={200}
-          height={200}
-          className="animate-rotate"
+          src="/images/cool-vibes-sticker-4.png"
+          alt="cool vibes only smiley"
+          width={323}
+          height={323}
+          className="overflow-visible pb-[100%] w-full"
         />
-      </div>
+      </Sticker>
       <div className="absolute w-full h-full top-0 left-0 bg-yellow-50">
         <div className="absolute w-full h-full top-0 left-0 mix-blend-multiply">
           <Image
@@ -33,16 +34,20 @@ const News: React.FC = () => {
           />
         </div>
       </div>
-      <div className="absolute select-none pointer-events-none h-full bottom-[-35%] left-[1%] right-[1%] hidden md:block">
-        <Image
-          src="/images/abi-bio.png"
-          alt="Large Sticker"
-          layout="fill"
-          objectFit="contain"
-          objectPosition="center"
-        />
+      <div className="absolute select-none pointer-events-none h-full 800:top-[-23%] 800:transform 800:-translate-y-[23%] 800:left-[3%] 800:w-[94%] 800:block max-w-799:top-[-38%%] max-w-799:transform max-w-799:-translate-y-[38%] max-w-799:left-[3%] max-w-799:w-[94%] max-w-799:block max-w-375:top-[-35%] max-w-375:transform max-w-375:left-[3%] max-w-375:w-[94%] max-w-375:block bg-transparent">
+        <figure className="select-none pointer-events-none">
+          <div className="w-full h-full absolute top-0 left-0">
+            <Image
+              src="/images/meet-the-team.png"
+              alt="STARS® team with Adam Thorpe and Alan Hernandez Alvarez and Ruixian Han"
+              width={1022}
+              height={441}
+              className='absolute w-full h-full object-contain object-center'
+            />
+          </div>
+        </figure>
       </div>
-      <div className="absolute z-20 w-full h-full 800:h-screen top-0 left-0">
+      <div className='relative z-20 w-full h-full 800:h-screen top-0 left-0'>
         <div className="flex items-center justify-center w-full h-full 800:h-screen">
           <div className="w-full p-8 800:p-8 text-white">
             <p className="text-14 800:text-22 font-termina">
@@ -72,16 +77,15 @@ const News: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 bg-transparent pointer-events-none select-none">
+      <div className="absolute select-none pointer-events-none h-full 800:left-[1%] 800:right-[1%] 800:bottom-[-35%] 800:w-[98%] max-w-799:left-[1%] max-w-799:bottom-0 max-w-799:w-[110%]  max-w-375:left-[8%] max-w-375:bottom-0 max-w-375:w-[95%] bg-transparent">
         <figure className="select-none pointer-events-none">
-          <div className="image w-full h-full absolute top-0 left-0">
+          <div className="w-full h-full absolute top-0 left-0">
             <Image
-              src="/images/meet-the-team.png"
-              alt="STARS® team with Adam Thorpe and Alan Hernandez Alvarez and Ruixian Han"
-              width={800}
-              height={800}
-              objectFit="contain"
-              objectPosition="center"
+              src="/images/abi-bio.png"
+              alt="Abi Aspen Glencross"
+              width={1014}
+              height={850}
+              className='absolute w-full h-full object-contain object-center'
             />
           </div>
         </figure>

@@ -99,6 +99,7 @@ const Who: React.FC = () => {
 
   return (
     <>
+    <div className="container">
     <div className="min-h-screen relative">
     <div className="fixed w-full h-full top-0 left-0 opacity-60 select-none pointer-events-none z-10" style={{ mixBlendMode: 'multiply' }}>
           <Image src="/images/background-transparent.png" alt="background pattern" fill objectFit="cover" />
@@ -235,6 +236,7 @@ const Who: React.FC = () => {
             ]}
           /> */}
       </div>
+    </div>
     </div>
     </>
   );

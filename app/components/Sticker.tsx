@@ -7,9 +7,9 @@ interface StickerProps {
   className?: string;
 }
 
-const Sticker: React.FC<StickerProps> = ({ animationClass, children, style, className }) => {
+const Sticker: React.FC<StickerProps> = ({ animationClass, children, className }) => {
   return (
-    <div className={`z-[14] overflow-visible  items-center justify-center  absolute pointer-events-none select-none m-0 ${animationClass} ${className}`} style={style}>
+    <div className={`z-[14] overflow-visible  items-center justify-center  absolute pointer-events-none select-none m-0 ${animationClass} ${className}`}>
       {children}
     </div>
   );
