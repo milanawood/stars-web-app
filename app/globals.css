@@ -243,34 +243,48 @@
   }
 }
 
-.embla__viewport {
-  overflow: hidden;
-  width: 100%;
+.button-active {
+  background-color:#000!important
 }
 
-.embla {
-  overflow: hidden;
-  margin-left:auto;
-  margin-right:auto;
-  width: 100%; 
-  background-color: antiquewhite; 
-  height: 100vh; 
-  position: fixed; 
-  top: 0; 
-  left: 0;
-}
+@media screen and (min-width:800px) {
+  .\38 00\:rtl{direction:rtl} }
+  
+  .ltr {
+    direction:ltr
+  }
+  
+  .embla {
+    position: relative; 
+    background-color: #f7f7f7;
+    margin-left: auto;
+    margin-right: auto}
+    
+    .embla__viewport { 
+      overflow: hidden;
+      width:100% }
+      
+      .embla__viewport.is-draggable {
+        cursor: move;
+        cursor: grab}
+        
+        .embla__viewport.is-dragging {
+          cursor:grabbing
+        }
 
 
-.embla__container{
-  display:flex;
-  margin-left: -10px;
-  flex-wrap: nowrap;
-  overflow: visible;
-  width: fit-content;
-  align-items: center;
-}
+.embla__container {
+   display: flex;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: transparent; 
+    margin-left: -10px 
+  }
 
-.embla__slide{
+.embla__slide {
   position: relative;
 }
 
@@ -278,95 +292,8 @@
 @media screen and (min-width: 768px) {
   .embla__slide {
     height:100vh;
-    margin-top: 0;
   }
 }
-.embla__slide:nth-child(1) {
-  /* Styles for the first slide */
-  width: 100vw;
-  min-width: 100vw;
-  @media (min-width: 800px) {
-    min-width: 80vh;
-    max-width: 800px;
-  }
-}
-
-.embla__slide:nth-child(2) {
-  /* Styles for the second slide */
-  width: 100vw;
-  @media (min-width: 1000px) {
-    min-width: 66vh;
-    max-width: 66vh;
-  }
-}
-
-.embla__slide:nth-child(3) {
-  /* Styles for the third slide */
-  width: 200vw;
-  @media (min-width: 800px) {
-    width: auto;
-    aspect-ratio: calc(1805 / 1124);
-  }
-}
-
-.embla__slide:nth-child(4),
-.embla__slide:nth-child(6),
-.embla__slide:nth-child(9) {
-  /* Styles for the fourth, sixth, and ninth slides */
-  width: 76px;
-}
-
-.embla__slide:nth-child(5),
-.embla__slide:nth-child(10) {
-  /* Styles for the fifth and tenth slides */
-  width: 200vw;
-  @media (min-width: 800px) {
-    width: auto;
-    aspect-ratio: calc(1805 / 1124);
-  }
-}
-
-.embla__slide:nth-child(7) {
-  /* Styles for the seventh slide */
-  width: 100vw;
-  min-width: 100vw;
-  @media (min-width: 800px) {
-    min-width: 80vh;
-    max-width: 800px;
-  }
-}
-
-.embla__slide:nth-child(8) {
-  /* Styles for the eighth slide */
-  min-width: 100vw;
-  width: 100vw;
-  @media (min-width: 800px) {
-    min-width: 560px;
-    max-width: 700px;
-  }
-}
-
-.embla__slide:nth-child(11) {
-  /* Styles for the eleventh slide */
-  width: 100vw;
-  @media (min-width: 800px) {
-    width: auto;
-    aspect-ratio: calc(1920 / 1080);
-  }
-}
-
-.embla__slide:nth-child(12) {
-  /* Styles for the twelfth slide */
-  width: 100vw;
-  min-width: 100vw;
-  @media (min-width: 800px) {
-    min-width: 80vh;
-    max-width: 800px;
-  }
-}
-
-
-
 
 .aspect-poster:before {
   float: left;
