@@ -31,7 +31,7 @@ const VideoSection: React.FC = () => {
       </div>
       <div className="w-full m-0 p-0 block 800:hidden">
         <video
-          className="w-full 800:js-height mt-[60px] h-mobile-screen object-cover opacity-80"
+          className="w-full 800:js-height h-mobile-screen object-cover opacity-80 top-0"
           loop
           muted
           autoPlay

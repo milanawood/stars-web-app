@@ -40,7 +40,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
       <div className="embla__viewport w-full bg-offwhite h-screen fixed top-0 left-0" ref={emblaRef}>
         <div className="embla__container container flex flex-nowrap items-center overflow-visible w-[fit-content]">
           {slides.map((slide, index) => (
-            <div className={`embla__slide ${slide.className}`} key={index}>
+            <div className={`embla__slide  js-height mt-[60px] h-[calc(100vh-60px)] 800:h-screen 800:mt-0 ${slide.className}`} key={index}>
               {slide.content}
             </div>
           ))}

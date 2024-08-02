@@ -14,7 +14,7 @@ import { EmblaOptionsType } from 'embla-carousel';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDES = [
-  { content: <ComingSoon />, className: "w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]" },
+  { content: <ComingSoon />, className: "z-20 w-screen min-w-[100vw] 800:min-w-[80vh] 800:max-w-[800px]" },
   { content: <MarqueeSlide />, className: "w-screen 1000:min-w-[66vh] 1000:max-w-[66vh]" },
   { content: <Quest />, className: "w-[200vw] 800:w-auto 800:aspect-[calc(1805/1124)] relative" },
   { content: <VerticalSlide />, className: "w-[76px]" },
