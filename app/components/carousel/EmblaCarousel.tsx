@@ -22,32 +22,32 @@ type EmblaCarouselProps = {
 };
 
 const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay(), WheelGesturesPlugin(wheelGesturesOptions)]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, ...options }, [Autoplay(), WheelGesturesPlugin(wheelGesturesOptions)]);
 
   const onScroll = useCallback(() => {
     if (!emblaApi) return;
+    console.log("Scroll ended at index:", emblaApi.selectedScrollSnap());
   }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
     emblaApi.on('scroll', onScroll);
-    emblaApi.reInit({ ...options, loop: true });
+    emblaApi.reInit({ loop: true, ...options }); // Re-initialize with loop true
   }, [emblaApi, onScroll, options]);
 
   return (
     <section className="embla">
-    <div className="embla__viewport w-full bg-offwhite h-screen fixed top-0 left-0" ref={emblaRef}>
-      <div className="embla__container flex flex-nowrap items-center overflow-visible w-[fit-content]">
-      {slides.map((slide, index) => (
-          <div className={`embla__slide h-[846px] mt-[60px] 800:h-[100vh] h-[calc(100vh-60px)] 800:mt-0 ${slide.className}`} key={index}>
-            {slide.content}
-          </div>
-        ))}
+      <div className="embla__viewport w-full bg-offwhite h-screen fixed top-0 left-0" ref={emblaRef}>
+        <div className="embla__container container flex flex-nowrap items-center overflow-visible w-[fit-content]">
+          {slides.map((slide, index) => (
+            <div className={`embla__slide ${slide.className}`} key={index}>
+              {slide.content}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </section>
-        
-        )
-      }
+  );
+};
 
 export default EmblaCarousel;
