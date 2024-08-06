@@ -29,7 +29,7 @@ const SLIDES = [
 
 const Home: React.FC = () => {
   return (
-    <div className="">
+    <div className="overflow-x-scroll">
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
     </div>
   );

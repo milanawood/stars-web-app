@@ -1,6 +1,4 @@
 import React from 'react';
-import BackgroundImage from '../components/BackgroundImage';
-import Blurb from './Blurb';
 import HeroSection from './HeroSection';
 import BodySectionOne from './BodySectionOne';
 import BodySectionTwo from './BodySectionTwo';
@@ -9,51 +7,62 @@ import BodySectionThree from './BodySectionThree';
 import BodySectionFour from './BodySectionFour';
 import BodySectionFive from './BodySectionFive';
 import BodySectionSix from './BodySectionSix';
-import Image from 'next/image';
 
 const Who: React.FC = () => {
   const stickerImages = [
     {
-      src: "/images/cap.png",
-      alt: "Stars trucker hat",
-      className: 'right-[-5%] w-[200px] top-[-5%] translate-y-neg-5 800:top-[-10%] 800:translate-y-neg-10 800:right-[-15%] 800:w-[33%] 1200:top-[-10%] 1200:translate-y-neg-10 1200:right-[-5%] 1200:w-[33%]',
-      animationClass: 'animate-none'
-    },
-    {
-      src: "/images/stereo-sticker-7.png",
-      alt: "STARS® retro stereo boombox",
-      className: 'left-[30%] w-[30%] top-[91.1%] translate-y-neg-91 bottom-[0] 600:left-[30%] 600:bottom-[-7%] 600:w-[25%] 800:top-[92%] 800:translate-y-neg-92 800:w-[21%] 1200:top-[90%] 1200:translate-y-neg-90 1200:left-[30%] 1200:w-[17%]',
-      animationClass: 'animate-tilt'
+      src: "/images/star-red.png",
+      alt: "STARS® logo red star outline",
+      className: ' top-[-5%] transform -translate-y-[5%] right-[-5%] w-[200px] 800:top-[-10%] 800:transform 800:-translate-y-[10%] 800:right-[-15%] 800:w-[33%] 1200:top-[-10%] 1200:transform 1200:-translate-y-[10%] 1200:right-[-5%] 1200:w-[33%]',
+      width: 605,
+      height: 570,
+      imageClassName: 'animate-none w-full overflow-visible pb-[94%]'
     },
     {
       src: "/images/burger-eyes.png",
-      alt: "cool vibes STARS® smiley",
-      className: 'top-[17%] translate-y-neg-17 left-[0%] w-[25%] 800:top-[27%] 800:top-[27%] 800:translate-y-neg-27 800:left-[0%] 800:w-[17%] 1200:top-[30%] 1200:translate-y-neg-30 1200:left-[6%] w-[15%]',
-      animationClass: 'animate-rotate'
+      alt: "STARS® smiley sticker with burger eyes",
+      className: 'left-[30%] w-[30%] top-[91%] transform -translate-y-[91%] bottom-[0] 600:left-[30%] 600:bottom-[-7%] 600:w-[25%] 800:top-[92%] 800:transform 800:-translate-y-[92%] 800:w-[21%] 1200:top-[90%] 1200:transform 1200:-translate-y-[90%] 1200:left-[30%] 1200:w-[17%]',
+      width: 420,
+      height: 420,
+      imageClassName: 'animate-tilt w-full overflow-visible pb-[75%]'
+    },
+    {
+      src: "/images/stereo-sticker-7.png",
+      alt: "STARS® retro boombox",
+      width: 405,
+      height: 335,
+      className: 'transform top-[17%] -translate-y-[17%] left-[0%] w-[25%] 800:top-[27%] 800:transform 800:-translate-y-[27%] 800:left-[0%] 800:w-[17%] 1200:top-[30%] 1200:transform 1200:-translate-y-[30%] 1200:left-[6%] w-[15%]',
+      imageClassName: 'animate-rotate w-full overflow-visible pb-[83%]'
     },
     {
       src: "/images/cool-vibes-sticker-4.png",
       alt: "STARS® cool vibes only blue smiley sticker",
-      className: 'top-[75%] left-[71%] bottom-[15%] w-[30%] translate-y-neg-75 rotate-[-35deg] 600:top-[60%] 600:translate-y-neg-60 600:rotate-[-30deg] 600:left-[70%] 600:bottom-[20%] 600:w-[25%] 800:top-[82%] 800:translate-y-neg-82 800:rotate-[-35deg] 800:left-[78%] 800:bottom-[0%] 800:w-[20%]',
-      animationClass: 'animate-skew'
+      width: 689,
+      height: 517,
+      className: 'top-[75%] left-[71%] bottom-[15%] w-[30%] transform -translate-y-[75%] -rotate-[35deg] 600:top-[60%] 600:transform 600:-translate-y-[60%] 600:rotate-[-30deg] 600:left-[70%] 600:bottom-[20%] 600:w-[25%] 800:top-[82%] 800:transform 800:-translate-y-[82%] 800:rotate-[-35deg] 800:left-[78%] 800:bottom-[0%] 800:w-[20%]',
+      imageClassName: 'animate-skew w-full overflow-visible pb-[75%]'
+    },
+    {
+      src: "/images/cap.png",
+      alt: "STARS® trucker cap",
+      width: 608,
+      height: 529,
+      className: 'left-[-20%] bottom-[-5%] w-[58%] transform 600:left-[-20%] 600:bottom-[-1%] 600:w-[50%] 800:left-[-5%] 800:bottom-[-5%] 800:w-[34%]',
+      imageClassName: 'animate-none w-full overflow-visible pb-[87%]'
     },
     {
       src: "/images/star-red.png",
       alt: "STARS® red star icon",
-      className: 'left-[-20%] bottom-[15%] w-[58%] transform 600:left-[20%] 600:bottom-[15%] 600:w-[50%] 800:left-[-5%] 800:bottom-[15%] 800:w-[34%]',
-      animationClass: 'animate-none'
-    },
-    {
-      src: "/images/star-red.png",
-      alt: "STARS® red star icon",
+      width: 586,
+      height: 558,
       className: 'right-[-5%] bottom-[-20%] w-[200px] transform 600:right-[-1%] 600:bottom-[-20%] 600:w-[25%] 600:transform 800:transform 800:right-[5%] 800:bottom-[-59%] 800:w-[40%]',
-      animationClass: 'animate-none'
+      imageClassName: 'w-full h-full overflow-visible pb-[95%]'
     }
   ];
 
   const stickers = [
     {
-      src: '/images/logo/pink.png',
+      src: '/images/logo-pink.png',
       alt: 'Stars vintage stereo boombox',
       style: { top: '24%', left: '12%', width: '28%' },
       className: 'sticker-burger',
@@ -99,17 +108,14 @@ const Who: React.FC = () => {
 
   return (
     <>
-    <div className="container">
-    <div className="min-h-screen relative">
-    <div className="fixed w-full h-full top-0 left-0 opacity-60 select-none pointer-events-none z-10" style={{ mixBlendMode: 'multiply' }}>
-          <Image src="/images/background-transparent.png" alt="background pattern" fill objectFit="cover" />
-    </div>
+    <div className="min-h-screen overflow-hidden">
+      <div className='mt-[60px] 800:mt-0'>
       <HeroSection
-        backgroundImage="/images/background-transparent.png"
         mainImage="/images/who-hero.gif"
         heading="We are STARS®"
         stickerImages={stickerImages}
       />
+      </div>
       <div className="relative z-20">
         <BodySectionOne
           stickerSrc="/images/stars-burger-character-5.png"
@@ -172,14 +178,14 @@ const Who: React.FC = () => {
         ]}
         imageSrc="/images/star-red.png"
       />
-      <BodySectionThree
+      {/*<BodySectionThree
         heading="Adventurers Unite"
         text="Need to add text here."
         imageSrc="/images/cool-vibes-sticker-4.png"
         imageAlt="stars logo red"
         backgroundColor="#b2f8e5"
-      />
-      <BodySectionFour
+      />*/}
+{/*      <BodySectionFour
         backgroundColor="#b2f8e5"
         bottomColor="#ffffe6"
         stickers={stickers}
@@ -188,8 +194,8 @@ const Who: React.FC = () => {
           alt: 'Main image'
         }}
         text="…our team will rule the world."
-      />
-      <BodySectionFive
+      />*/}
+{      /*<BodySectionFive
         backgroundColor="#b2f8e5"
         borderColor="border-green"
         stickers={bodySectionFiveStickers}
@@ -199,7 +205,7 @@ const Who: React.FC = () => {
         }}
         heading="SUSTAINABLE JOY FOR"
         subheading="EVERYONE"
-      />
+      />*/}
       <TextMarquee 
       textItems={[
         'Peace',
@@ -236,7 +242,6 @@ const Who: React.FC = () => {
             ]}
           /> */}
       </div>
-    </div>
     </div>
     </>
   );
