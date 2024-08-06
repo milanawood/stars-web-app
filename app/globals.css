@@ -252,14 +252,13 @@
   
   .embla {
     margin-left: auto;
-    --slide-height: 848px;
-    --slide-spacing: 1rem;
-    --slide-size: auto;
   }
+
   .embla__viewport {
     overflow: visible;
     width: fit-content;
   }
+
   .embla__container {
     display: flex;
     overflow: visible;
@@ -270,6 +269,7 @@
     min-width: 0;
     padding-left: var(--slide-spacing);
   }
+  
   .embla__slide {
     position: relative;
   }
