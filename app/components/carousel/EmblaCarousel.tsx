@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { EmblaOptionsType } from 'embla-carousel';
 import AutoScroll from 'embla-carousel-auto-scroll';
@@ -23,8 +23,14 @@ type EmblaCarouselProps = {
 };
 
 const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
+  const containerRef = useCallback((node: HTMLDivElement | null) => {
+    if (node !== null && emblaApi) {
+      emblaApi.reInit({ container: node });
+    }
+  }, []);
+
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, ...options },
+    { loop: false, ...options },
     [
       AutoScroll({ stopOnInteraction: true, startDelay: 4000 } as AutoScrollOptionsType),
       WheelGesturesPlugin(wheelGesturesOptions),
@@ -45,8 +51,10 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
   useEffect(() => {
     if (!emblaApi) return;
     emblaApi.on('scroll', onScroll);
-    emblaApi.reInit({ loop: true, ...options });
-  }, [emblaApi, onScroll, options]);
+    return () => {
+      emblaApi.off('scroll', onScroll);
+    };
+  }, [emblaApi, onScroll]);
 
   useEffect(() => {
     const updateScroll = () => {
@@ -106,7 +114,10 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
       <div className="embla__viewport w-full bg-offwhite h-screen fixed top-0 left-0" ref={emblaRef}>
         <div
           className="embla__container container flex flex-nowrap items-center overflow-visible w-[fit-content]"
-          ref={handleContainerRef}
+          ref={(node) => {
+            handleContainerRef(node);
+            containerRef(node);
+          }}
         >
           {slides.map((slide, index) => (
             <div

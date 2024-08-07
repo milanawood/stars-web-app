@@ -32,13 +32,13 @@ const Burger: React.FC = () => {
           className="overflow-visible object-cover pb-[56%] w-full"
         />
       </Sticker>
-      <Sticker className="animate-tilt left-[30%] bottom-[11%] w-[20%] 500:left-[35%] 500:w-[35%] 500:bottom-[10%] 1200:left-[32%] 1200:w-[20%] 1200:bottom-[10%]">
+      <Sticker className="left-[30%] bottom-[11%] w-[20%] 500:left-[35%] 500:w-[35%] 500:bottom-[10%] 1200:left-[32%] 1200:w-[20%] 1200:bottom-[10%]">
         <Image
           src="/images/burger-eyes.png"
           alt="burger eye smiley"
           width={769}
           height={769}
-          className="overflow-visible object-cover pb-[84%] w-full"
+          className="overflow-visible object-cover pb-[84%] w-full animate-tilt "
         />
       </Sticker>
       <div className="absolute select-none pointer-events-none w-full h-full top-0 left-0">
