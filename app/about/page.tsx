@@ -66,7 +66,6 @@ const Who: React.FC = () => {
       alt: 'Stars vintage stereo boombox',
       style: { top: '24%', left: '12%', width: '28%' },
       className: 'sticker-burger',
-      animationClass: 'skew',
     },
     {
       src: '/images/logo-pink.png',
@@ -147,13 +146,11 @@ const Who: React.FC = () => {
                     src: "/images/abi-bio.png",
                     alt: "STARS® CTO Abi Aspen Glencross",
                     className: 'top-[30%] left-[30px] w-[40%] translate-y-neg-30 800:left-[5%] 800:top-[38%] 800:w-[35%] 1200:top-[38%] 1200:translate-y-neg-38 1200:left-[5%] 1200:w-[450px]',
-                    animationClass: 'animate-none'
                   },
                   {
                     src: "/images/star-red.png",
                     alt: "STARS® red star icon",
-                    className: 'top-[0%] translate-y-neg-0 w-[50%] left-[-3%] 800:top-[20%] 800:w-[340px] 800:translate-y-neg-20 800:left-[5%] 800:w-[340px] 1200:top-[19%] 1200:w-[300px] 1200:translate-y-neg-19 1200:left-[-5%]',
-                    animationClass: 'animate-none'
+                    className: 'animate-skew top-[0%] translate-y-neg-0 w-[50%] left-[-3%] 800:top-[20%] 800:w-[340px] 800:translate-y-neg-20 800:left-[5%] 800:w-[340px] 1200:top-[19%] 1200:w-[300px] 1200:translate-y-neg-19 1200:left-[-5%]',
                   }
                 ]}
                 images={[

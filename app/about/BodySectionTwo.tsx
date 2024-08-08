@@ -13,7 +13,6 @@ interface BodySectionTwoProps {
     src: string;
     alt: string;
     className: string;
-    animationClass: string;
   }[];
   images: {
     src: string;
@@ -30,7 +29,6 @@ const BodySectionTwo: React.FC<BodySectionTwoProps> = ({ sections, stickers, ima
           <Sticker
             key={index}
             className={`z-[14] overflow-visible items-center justify-center absolute pointer-events-none select-none ${sticker.className}`}
-            animationClass={sticker.animationClass}
           >
             <div className="image w-full overflow-visible" style={{ height: 0, paddingBottom: '75%' }}>
               <Image
