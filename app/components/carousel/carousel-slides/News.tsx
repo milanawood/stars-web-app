@@ -4,37 +4,36 @@ import Sticker from '../../Sticker';
 
 const News: React.FC = () => {
   return (
-    <div className="w-full h-full top-0">
-      <Sticker className="animate-skew 800:top-[55%] 800:transform 800:-translate-y-[55%] 800:left-[5px] 800:w-[200px] max-w-799:[top-23%] max-w-799:transform max-w-799:-translate-y-[23%] max-w-799:w-[200px] max-w-799:left-[1%] max-w-375:top-[26%] max-w-375:transform max-w-375:left-[4%] max-w-375:w-[120px]">
+    <div className="w-full h-mobile-screen 800:h-screen top-0">
+      <Sticker className="800:top-[55%] 800:transform 800:-translate-y-[55%] 800:left-[5px] 800:w-[200px] max-w-799:[top-3%] max-w-799:-translate-y-[0.5%] max-w-799:w-[150px] max-w-799:left-[1%] max-w-375:top-[26%] max-w-375:transform max-w-375:left-[4%] max-w-375:w-[120px]">
         <Image
           src="/images/logo-pink.png"
           alt="STARS® logo pink"
           width={1034}
           height={675}
-          className="overflow-visible pb-[65%] w-full"
+          className="pb-[65%] w-full animate-tilt "
         />
       </Sticker>
-      <Sticker className="animate-rotate 800:top-[52%] 800:transform 800:-translate-y-[52%] 800:right-[6px] 800:w-[200px] max-w-799:right-[23%] max-w-799:transform max-w-799:bottom-[11%] max-w-799:w-[180px]">
+      <Sticker className="800:top-[52%] 800:transform 800:-translate-y-[52%] 800:right-[6px] 800:w-[200px] max-w-799:right-[8%] max-w-799:transform max-w-799:bottom-[11%] max-w-799:w-[180px]">
         <Image
           src="/images/cool-vibes-sticker-4.png"
           alt="cool vibes only smiley"
           width={323}
           height={323}
-          className="overflow-visible pb-[100%] w-full"
+          className="animate-skew pb-[100%] w-full"
         />
       </Sticker>
-      <div className="absolute w-full h-full top-0 left-0 bg-yellow-50">
+      <div className="absolute w-full h-screen top-0 left-0 bg-yellow-50">
         <div className="absolute w-full h-full top-0 left-0 mix-blend-multiply">
           <Image
             src="/images/background-transparent.png"
             alt="Background Texture"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
+            className='object-cover object-center'
           />
         </div>
       </div>
-      <div className="absolute select-none pointer-events-none h-full 800:top-[-23%] 800:transform 800:-translate-y-[23%] 800:left-[3%] 800:w-[94%] 800:block max-w-799:top-[-38%%] max-w-799:transform max-w-799:-translate-y-[38%] max-w-799:left-[3%] max-w-799:w-[94%] max-w-799:block max-w-375:top-[-35%] max-w-375:transform max-w-375:left-[3%] max-w-375:w-[94%] max-w-375:block bg-transparent">
+      <div className="absolute select-none pointer-events-none h-full 800:top-[-23%] 800:transform 800:-translate-y-[23%] 800:left-[3%] 800:w-[94%] 800:block max-w-799:top-[12%] max-w-799:transform max-w-799:-translate-y-[38%] max-w-799:left-[3%] max-w-799:w-[94%] max-w-799:block max-w-375:top-[-35%] max-w-375:transform max-w-375:left-[3%] max-w-375:w-[94%] max-w-375:block bg-transparent">
         <figure className="select-none pointer-events-none">
           <div className="w-full h-full absolute top-0 left-0">
             <Image
@@ -69,7 +68,7 @@ const News: React.FC = () => {
                     strokeWidth="1.5"
                   ></path>
                 </svg>
-                <span className="absolute z-10 text-center top-[2px] left-0 flex justify-center items-center font-termina w-full h-full">
+                <span className="absolute z-10 text-center top-[2px] left-0 flex justify-center items-center font-termina w-full h-full ">
                   Meet the Team!
                 </span>
               </a>
@@ -77,7 +76,7 @@ const News: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="absolute select-none pointer-events-none h-full 800:left-[1%] 800:right-[1%] 800:bottom-[-35%] 800:w-[98%] max-w-799:left-[1%] max-w-799:bottom-0 max-w-799:w-[110%]  max-w-375:left-[8%] max-w-375:bottom-0 max-w-375:w-[95%] bg-transparent">
+      <div className="absolute select-none pointer-events-none h-full 800:left-[1%] 800:right-[1%] 800:bottom-[-35%] 800:w-[98%] max-w-799:left-[15%] max-w-799:bottom-[-30%] max-w-799:w-[80%] bg-transparent">
         <figure className="select-none pointer-events-none">
           <div className="w-full h-full absolute top-0 left-0">
             <Image

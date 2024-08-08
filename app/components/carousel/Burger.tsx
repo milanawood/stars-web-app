@@ -4,58 +4,54 @@ import Sticker from '../Sticker';
 
 const Burger: React.FC = () => {
   return (
-    <div className="w-full h-full top-0">
-      <Sticker className="top-[50%] transform -translate-y-[50%] right-0  w-[240px] 800:top-[50%] 800:transform 800:-translate-y-1/2 800:w-[240px]">
+    <div className="w-[200vw] 800:w-auto 800:aspect-[calc(1805/1124)] relative h-mobile-screen 800:h-screen top-0">
+      <Sticker className="top-[50%] transform -translate-y-[50%] right-0  w-[5%] 800:top-[50%] 800:transform 800:-translate-y-1/2 800:w-[240px]">
         <Image
           src="/images/star-red.png"
           alt="STARS® logo red"
           width={316}
           height={364}
-          className="overflow-visible object-cover pb-[115%] w-full"
+          className="object-cover pb-[115%] w-full"
         />
       </Sticker>
-      <Sticker className="top-[27.5%] transform -translate-y-[27.5%] right-[5%] w-[30%] 800:top-[24%] 800:transform 800:-translate-y-[24%] 800:w-[24%] 800:right-[9%]">
+      <Sticker className="top-[15%] transform -translate-y-[25%] right-[-2%] w-[15%] 800:top-[24%] 800:transform 800:-translate-y-[24%] 800:w-[24%] 800:right-[9%]">
         <Image
           src="/images/stars-burger-character-5.png"
           alt="STARS® logo red"
           width={971}
           height={596}
-          className="overflow-visible object-cover pb-[61%] w-full"
+          className="object-cover pb-[61%] w-full"
         />
       </Sticker>
-      <Sticker className="left-[33%] w-[40%] bottom-0">
+      <Sticker className="left-[33%] w-[20%] bottom-[-15%]">
         <Image
           src="/images/logo-red.png"
           alt="STARS® logo red"
           width={2295}
           height={1290}
-          className="overflow-visible object-cover pb-[56%] w-full"
+          className="object-cover pb-[56%] w-full"
         />
       </Sticker>
-      <Sticker className="left-[30%] bottom-[11%] w-[20%] 500:left-[35%] 500:w-[35%] 500:bottom-[10%] 1200:left-[32%] 1200:w-[20%] 1200:bottom-[10%]">
+      <Sticker className="left-[30%] top-[2%] w-[15%] 500:left-[35%] 500:w-[35%] 500:bottom-[10%] 1200:left-[32%] 1200:w-[20%] 1200:bottom-[10%]">
         <Image
           src="/images/burger-eyes.png"
           alt="burger eye smiley"
           width={769}
           height={769}
-          className="overflow-visible object-cover pb-[84%] w-full animate-tilt "
+          className="object-cover pb-[84%] w-full animate-skew "
         />
       </Sticker>
-      <div className="absolute select-none pointer-events-none w-full h-full top-0 left-0">
-        <figure>
-          <div className='absolute z-20 w-full h-full top-0 left-0'>
-            <Image src='/images/background-transparent.png'
-              alt='texture background'
-              fill
-              objectFit='cover'
-              objectPosition='center'
-              className='absolute w-full h-full object-cover object-center mix-blend-multiply'
-            />
-          </div>
-        </figure>
+      <div className="absolute w-full h-screen top-0 left-0 bg-yellow-50">
+        <div className="absolute w-full h-full top-0 left-0 mix-blend-multiply">
+          <Image
+            src="/images/background-transparent.png"
+            alt="Background Texture"
+            fill
+            className='object-cover object-center'
+          />
+        </div>
       </div>
-      <div className="absolute select-none h-full top-0 transform translate-y-0 w-60% bg-transparent">
-        <figure className='select-none pointer-events-none'>
+      <div className="absolute select-none pointer-events-none h-full max-w-799:w-[50%] top-0 -translate-y-0 right-0">
           <div className='absolute w-full h-full top-0 left-0'>
             <Image
               src='/images/about-polaroids-large.png'
@@ -65,14 +61,13 @@ const Burger: React.FC = () => {
               className='absolute w-full h-full object-cover object-center'
             />
           </div>
-        </figure>
       </div>
-      <div className="relative z-20 w-1/2 h-full 800:h-screen top-0 left-0">
+      <div className="relative z-20 w-1/2 h-mobile-screen 800:h-screen top-0 left-0">
         <div className="flex items-center justify-center w-full h-full 800:h-screen">
           <div className="flex items-center justify-center w-full h-full 800:h-screen">
             <div className='w-full p-8 800:p-[5vw] text-stars'>
               <div className='w-full text-left'>
-                <h3 className="text-stars uppercase font-extrabold font-termina my-2 py-2 text-4xl leading-[80%] 800:text-[10vh]">
+                <h3 className="text-stars uppercase font-extrabold font-termina my-2 py-2 text-6xl leading-[80%] 800:text-[10vh]">
                   STARS® is developing the next generation <br />
                   <span className="text-stars font-light text-2xl">
                     of plant-based burger flavours for diverse proteins and novel fat

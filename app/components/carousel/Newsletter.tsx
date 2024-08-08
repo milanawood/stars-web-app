@@ -4,8 +4,8 @@ import Sticker from '../Sticker';
 
 const Newsletter: React.FC = () => {
   return (
-    <div className="w-full h-full top-0">
-      <div className="absolute pointer-events-none shadow-carousel w-full h-full top-0 left-0">
+    <div className="w-full h-mobile-screen 800:h-screen top-0">
+      <div className="absolute pointer-events-none shadow-carousel w-full h-screen object-cover opacity-90 top-0 left-0">
         <Image
           src="/images/wax-paper.png"
           alt="STARS® wax paper illustration"
@@ -18,7 +18,7 @@ const Newsletter: React.FC = () => {
         <div className="w-full max-w-[400px] relative rounded-[10px] p-2 bg-[#b2f8e5]">
           <div className='absolute w-full h-full border border-black rounded-[10px] left-[10px] bottom-[10px] border-solid'></div>
           <div className="relative">
-            <h3 className="text-black my-2 py-2 text-left p-4 font-ribons text-66 leading-50 uppercase 800:text-80 800:leading-66">
+            <h3 className="text-black my-2 py-2 text-left p-4 font-termina font-extrabold text-7xl leading-50 uppercase 800:text-80 800:leading-66">
               Learn About Our R&D
             </h3>
           </div>
@@ -39,22 +39,22 @@ const Newsletter: React.FC = () => {
           </div>
         </div>
       </div>
-      <Sticker className="animate-tilt top-[35%] transform -translate-y-[35%] right-[1%] w-[40%] 400:top-[24%] 400:transform 400:-translate-y-[24%] 400:right-[1%] 400:w-[30%] 800:top-[350px] 800:transform 800:right-[5%] 800:w-[240px]">
+      <Sticker className="top-[35%] transform -translate-y-[35%] right-[1%] w-[40%] 400:top-[40%] 400:-translate-y-[24%] 400:right-[1%] 400:w-[30%] 800:top-[350px] 800:transform 800:right-[5%] 800:w-[240px]">
         <Image
           src="/images/burger-icon-circle.png"
           alt="STARS® sticker"
           width={500}
           height={500}
-          className="overflow-visible pb-[97%] w-full"
+          className="animate-tilt pb-[97%] w-full"
         />
       </Sticker>
-      <Sticker className="animate-tilt top-[52%] transform -translate-y-[52%] left-[40%] w-[140px] 400:top-[36%] 400:transform 400:-translate-y-[36%] 400:left-[40%] 400:w-[140px] 800:top-[440px] 800:transform 800:left-[40%] 800:w-[140px]">
+      <Sticker className=" top-[52%] transform -translate-y-[52%] left-[40%] w-[140px] 400:top-[75%] 400:-translate-y-[36%] 400:left-[20%] 400:w-[200px] 800:top-[440px] 800:transform 800:left-[40%] 800:w-[140px]">
         <Image
           src="/images/stereo-sticker-7.png"
           alt="STARS® sticker"
           width={757}
           height={372}
-          className="overflow-visible pb-[49%] w-full"
+          className="animate-skew pb-[49%] w-full"
         />
       </Sticker>
     </div>

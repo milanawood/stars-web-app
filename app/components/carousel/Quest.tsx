@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Quest: React.FC = () => {
   return (
-    <div className="w-full h-full top-0">
+    <div className="w-[200vw] 800:w-auto 800:aspect-[calc(1805/1124)] relative 800:h-screen h-mobile-screen top-0">
       <Sticker className="top-[14%] -translate-y-[14%] right-[5%] w-[32%] pointer-events-none select-none ">
         <Image
           src="/images/polaroid-2-10.png"

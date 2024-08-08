@@ -15,7 +15,7 @@ const VideoSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen relative">
+    <div className="w-screen h-mobile-screen 800:h-screen relative">
       <div className="w-full m-0 p-0 hidden 800:block">
         <video
           className="w-full h-full object-cover opacity-80"
