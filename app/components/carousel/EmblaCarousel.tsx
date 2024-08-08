@@ -69,7 +69,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
     <section className="embla bg-fontwhite">
       <div className="embla__viewport w-full bg-offwhite h-screen fixed top-0 left-0" ref={emblaRef}>
         <div
-          className="embla__container container flex flex-nowrap items-center overflow-visible w-[fit-content]"
+          className="embla__container container flex flex-nowrap items-center overflow-visible"
           ref={(node) => {
             containerRef(node);
           }}
