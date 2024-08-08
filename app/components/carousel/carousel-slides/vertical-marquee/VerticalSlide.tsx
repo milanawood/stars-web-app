@@ -19,14 +19,14 @@ const VerticalSlide: React.FC = () => {
   }, []);
 
   return (
-      <div className="h-screen transform rotate-180 select-none text-marquee pointer-events-none relative bg-green-300">
+      <div className="h-screen transform rotate-180 select-none pointer-events-none relative bg-stars">
         <div className="transform rotate-90 origin-top-left block w-[100vh] h-[50px] translate-x-[92px] 800:translate-x-[100px]">
-          <div ref={marqueeRef} className="flex h-screen w-full pause-animation animate-marqueeL">
+          <div ref={marqueeRef} className="relative overflow-visible flex h-screen w-full pt-6">
             {items.map((item, index) => (
-              <div key={index} className="marqueeContent">
-                <h3 className="marqueeItem flex uppercase my-1 mx-2 py-1 font-termina font-extrabold relative leading-none text-outline text-xl text-green-300">
+              <div key={index} className="flex marqueeContent pause-animation animate-marqueeL">
+                <h2 className="marqueeItem uppercase my-1 mx-2 py-1 font-termina font-extrabold relative leading-none text-outline text-6xl text-stars">
                   {item}
-                </h3>
+                </h2>
               </div>
             ))}
           </div>

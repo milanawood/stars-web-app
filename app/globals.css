@@ -20,7 +20,7 @@
   }
 
   .text-outline {
-    -webkit-text-stroke: 2px red;
+    -webkit-text-stroke: 2px antiquewhite;
   }
 
   .placeholder\:text-offwhite::-moz-placeholder {
@@ -342,6 +342,11 @@
   direction: ltr;
 }
 
+.virtual-scroll {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: none;
+}
+
 [data-marqy] {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -411,6 +416,7 @@
 .button-active {
   background-color: salmon !important;
 }
+
 
 
 @media (min-width: 400px) {

@@ -4,41 +4,38 @@ import Sticker from '../../Sticker';
 
 const Manifest: React.FC = () => {
   return (
-    <div className="top-0 w-full h-full">
-      <Sticker animationClass="animate-none" className="left-[10%] bottom-[2%] w-[80%]">
-        <div className="w-full overflow-visible relative ">
+    <div className="top-0 w-full h-full bg-stars bg-opacity-60 ml-1">
+      <Sticker className="left-[10%] bottom-[1%] w-[30%] 400:hidden">
           <Image
             src="/images/stars-burger-character-5.png"
             alt="burger guy"
-            layout="fill"
-            objectFit="contain"
-            className="animate-none overflow-visible pb-[41.0726%]"
+            width={500}
+            height={105}
+            className="animate-none overflow-visible w-full pb-[41%] object-cover"
           />
-        </div>
       </Sticker>
-      <Sticker animationClass="animate-none" className="top-[18%] left-[9%] w-[80%] 800:top-[22%] 800:left-[7.5%]">
-        <div className="w-full overflow-visible relative ">
+      <Sticker className="top-[8%] -translate-y-[8%] left-[25%] w-[50%] 800:hidden">
+        <div className="w-full overflow-visible pb-[13%]">
           <Image
             src="/images/logo-offwhite.png"
-            alt="burger text"
-            fill
-            objectFit="contain"
-            className="animate-none overflow-visible pb-[13.0435%]"
-          />
-        </div>
-      </Sticker>
-      <Sticker animationClass="animate-none" className="top-[5%] right-[15%] w-[40%] 800:top-[9%] 800:w-[23%]">
-        <div className="w-full overflow-visible relative ">
-          <Image
-            src="/images/star-offwhite.png"
-            alt="crossed out brand manifesto"
-            fill
-            objectFit="contain"
+            alt="stars off-white logo star outline"
+            width={250}
+            height={250}
             className="animate-none overflow-visible pb-[39.4558%]"
           />
         </div>
       </Sticker>
-      <div className='absolute select-none pointer-events-none w-full h-full top-0 left-0 bg-stars bg-opacity-60'></div>
+      <Sticker className="400:hidden 800:top-[10%] 800:left-[60%] 800:-translate-y-[22%] 800:w-[50%]">
+        <div className="w-full overflow-visible pb-[13%]">
+          <Image
+            src="/images/star-offwhite.png"
+            alt="stars off-white logo star outline"
+            width={250}
+            height={250}
+            className="animate-none overflow-visible pb-[39.4558%]"
+          />
+        </div>
+      </Sticker>
       <div className="relative z-20 w-full h-full 800:h-screen top-0 left-0">
         <div className='flex items-center justify-center w-full h-full 800:h-screen'>
           <div className="w-full p-8 800:p-[5vw]">
