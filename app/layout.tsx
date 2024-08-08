@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Viewport } from 'next';
 import './globals.css';
 import { NavProvider } from './contexts/NavContext';
 import NavBar from './components/navigation/NavBars';
@@ -12,13 +13,16 @@ export const metadata: Metadata = {
     { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
     { url: '/favicon.ico' },
   ],
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
 };
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  // Also supported by less commonly used
+  // interactiveWidget: 'resizes-visual',
+}
 
 export default function RootLayout({
   children,

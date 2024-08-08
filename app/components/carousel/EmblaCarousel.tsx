@@ -32,7 +32,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: false, ...options },
     [
-      AutoScroll({ stopOnInteraction: true, startDelay: 4000 } as AutoScrollOptionsType),
+      AutoScroll({ stopOnInteraction: true, startDelay: 1000 } as AutoScrollOptionsType),
       WheelGesturesPlugin(wheelGesturesOptions),
     ]
   );
