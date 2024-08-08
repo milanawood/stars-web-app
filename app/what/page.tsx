@@ -42,7 +42,6 @@ const What = () => {
         </div>
       </div>
       <Sticker
-        animationClass="animate-none"
         className="absolute top-[55%] left-[10%] sm:top-[60%] sm:left-[40%] sm:transform sm:translate-x-[-50%]"
       >
         <Image
@@ -66,7 +65,6 @@ const What = () => {
         />
       </Sticker>*/}
       <Sticker
-        animationClass="animate-none"
         className="absolute top-[70%] left-[10%] -rotate-45"
       >
         <Image
@@ -78,7 +76,6 @@ const What = () => {
         />
   </Sticker>
       <Sticker
-        animationClass="animate-spin"
         className="absolute top-[70%] left-[80%]"
       >
         <Image
