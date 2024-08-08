@@ -27,7 +27,7 @@ const REPEATED_SLIDES = [...SLIDES, ...SLIDES.map(slide => ({ ...slide, _key: `$
 
 const Home: React.FC = () => {
   return (
-    <div className="container mx-auto">
+    <div className="embla_viewport mx-auto">
       <LoadableComponent components={REPEATED_SLIDES} options={OPTIONS} />
     </div>
   );

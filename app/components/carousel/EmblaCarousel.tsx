@@ -13,7 +13,7 @@ const wheelGesturesOptions: WheelGesturesPluginOptions = {
 };
 
 type SlideType = {
-  content: JSX.Element;
+  content: React.JSX.Element;
   className: string;
 };
 
@@ -24,19 +24,33 @@ type EmblaCarouselProps = {
 
 const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
   const containerRef = useCallback((node: HTMLDivElement | null) => {
-    if (node !== null && emblaApi) {
-      emblaApi.reInit({ container: node });
+    try {
+      if (node !== null && emblaApi) {
+        emblaApi.reInit({ container: node });
+      }
+    } catch (error) {
+      console.error("Error reinitializing Embla Carousel:", error);
     }
   }, []);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: false, ...options },
+    {
+      loop: true,
+      breakpoints: {
+        '(min-width: 768px)': { loop: true },
+        '(min-width: 200px)': { loop: true },
+      },
+      ...options,
+    },
     [
-      AutoScroll({ stopOnInteraction: true, startDelay: 1000 } as AutoScrollOptionsType),
+      AutoScroll({ stopOnInteraction: true, startDelay: 1000, speed: 1 } as AutoScrollOptionsType),
       WheelGesturesPlugin(wheelGesturesOptions),
     ]
   );
 
+  useEffect(() => {
+    console.log("Embla API:", emblaApi);
+  }, [emblaApi]);
 
   const onScroll = useCallback(() => {
     if (!emblaApi) return;
@@ -50,7 +64,6 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
       emblaApi.off('scroll', onScroll);
     };
   }, [emblaApi, onScroll]);
-
 
   return (
     <section className="embla bg-fontwhite">
