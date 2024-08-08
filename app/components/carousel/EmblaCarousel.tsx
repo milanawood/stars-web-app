@@ -36,12 +36,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
       WheelGesturesPlugin(wheelGesturesOptions),
     ]
   );
-  const [scrollContainer, setScrollContainer] = useState<HTMLDivElement | null>(null);
-  const [scrollOffset, setScrollOffset] = useState<number>(500);
 
-  // State for tracking the scroll progress
-  const [e, setE] = useState(0);
-  const [t, setT] = useState(0);
 
   const onScroll = useCallback(() => {
     if (!emblaApi) return;
@@ -56,58 +51,6 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
     };
   }, [emblaApi, onScroll]);
 
-  useEffect(() => {
-    const updateScroll = () => {
-      if (scrollContainer) {
-        const f = (e: number, t: number, factor: number) => e * (1 - factor) + t * factor;
-        const m = (e: number, t: number = 3) => {
-          const factor = 10 ** t;
-          return Math.round(e * factor) / factor;
-        };
-
-        let animationFrameId: number;
-
-        const animate = () => {
-          setE(prevE => {
-            const newE = f(prevE, t, 0.2);
-            const newT = m(newE, 100);
-            scrollContainer.style.transform = `translateX(${newT}px) translateZ(0)`;
-            return newE;
-          });
-
-          animationFrameId = requestAnimationFrame(animate);
-        };
-
-        animationFrameId = requestAnimationFrame(animate);
-
-        const handleScroll = (e: WheelEvent) => {
-          const { deltaY, deltaX } = e;
-          setT(prevT => prevT + deltaY + deltaX);
-        };
-
-        window.addEventListener('wheel', handleScroll);
-        return () => {
-          cancelAnimationFrame(animationFrameId);
-          window.removeEventListener('wheel', handleScroll);
-        };
-      }
-    };
-
-    updateScroll();
-  }, [scrollContainer]);
-
-  useEffect(() => {
-    if (scrollContainer) {
-      setScrollOffset(scrollContainer.offsetWidth / 3);
-    }
-  }, [scrollContainer]);
-
-  const handleContainerRef = (ref: HTMLDivElement | null) => {
-    if (ref) {
-      setScrollContainer(ref);
-      setScrollOffset(ref.offsetWidth / 3);
-    }
-  };
 
   return (
     <section className="embla bg-fontwhite">
@@ -115,7 +58,6 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
         <div
           className="embla__container container flex flex-nowrap items-center overflow-visible w-[fit-content]"
           ref={(node) => {
-            handleContainerRef(node);
             containerRef(node);
           }}
         >
