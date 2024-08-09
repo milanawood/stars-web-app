@@ -31,7 +31,7 @@ const Marquee: React.FC<MarqueeProps> = ({ children }) => {
         </div>
       </figure>
     </div>
-    <div className="absolute left-0 top-0 z-10 flex items-center justify-center select-none pointer-events-none w-full h-full">
+    <div className="absolute left-0 top-0 z-10 flex items-center justify-center select-none pointer-events-none w-full h-mobile-screen 800:h-screen">
       <div className="w-[80%] h-[80%] border-4 border-solid border-cyan-500"></div>
     </div>
       <div className="marqueeContent animate-marqueeL h-full w-full flex items-center">

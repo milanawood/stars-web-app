@@ -15,7 +15,7 @@ const VideoSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-screen h-mobile-screen 800:h-screen relative">
+    <div className="w-screen h-mobile-screen 800:h-screen 1024:h-screen relative">
       <div className="w-full m-0 p-0 hidden 800:block">
         <video
           className="w-full h-full object-cover opacity-80"
@@ -31,7 +31,7 @@ const VideoSection: React.FC = () => {
       </div>
       <div className="w-full m-0 p-0 block 800:hidden">
         <video
-          className="w-full 800:js-height h-mobile-screen object-cover opacity-80 top-0"
+          className="w-full  800:js-height h-mobile-screen object-cover opacity-80 top-0"
           loop
           muted
           autoPlay

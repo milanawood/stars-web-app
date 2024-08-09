@@ -34,7 +34,7 @@ const config: Config = {
       },
       screens: {
         'max-w-799': {'max': '799px'},
-        'max-w-375': {'max': '375px'}, 
+        'max-w-375': {'max': '395px'}, 
         '400': '400px',
         '600': '600px',
         '800': '800px',
