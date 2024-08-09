@@ -18,7 +18,6 @@ const Marquee: React.FC<MarqueeProps> = ({ children }) => {
 
   return (
     <div className="w-full overflow-hidden h-mobile-screen 800:h-screen top-0 relative">
-          <div className="w-full overflow-hidden h-full top-0 relative">
     <div className="absolute w-full h-full top-0 left-0 bg-[rgb(255,255,230)]">
       <figure>
         <div className="absolute pointer-events-none shadow-carousel w-full h-full top-0 left-0">
@@ -39,7 +38,6 @@ const Marquee: React.FC<MarqueeProps> = ({ children }) => {
           {children}
         </div>
       </div>
-    </div>
     </div>
   );
 };
