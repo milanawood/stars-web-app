@@ -47,7 +47,7 @@ const config: Config = {
       height: {
         'js-height': '848px',
         'screen-800': '100vh',
-        'mobile-screen': 'calc(100vh - 60px)',
+        'mobile-screen': 'calc(100dvh - 60px)',
       },
       width: {
         'auto': 'auto',
