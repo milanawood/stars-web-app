@@ -11,38 +11,39 @@ const Quest: React.FC = () => {
           alt="stars burger polaroid"
           width={500}
           height={500}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-contain overflow-visible pb-[117%] animate-none"
+          className="object-contain pb-[117%] animate-none"
         />
       </Sticker>
-      <Sticker className="left-[45%] bottom-[5%] w-[20%]">
+      <Sticker className="left-[45%] bottom-[5%] w-[20%]
+      max-w-375:w-[30%] max-w-375:bottom-[-35%]">
         <Image
-          src="/images/cap.png"
+          src="/images/polaroid-10.png"
           alt="stars logo burger off white"
           width={500}
           height={500}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-contain pb-[123%] overflow-visible"
+          className="object-contain pb-[123%]"
         />
       </Sticker>
-      <Sticker className="top-[2%] -translate-y-[2%] left-[30%] w-[35%] 800:top-[2%] 800:-translate-y-[-2%] 800:left-[27%] 800:w-[30%] ">
+      <Sticker className="top-[2%] -translate-y-[2%] left-[30%] w-[35%] 
+      max-w-375:w-[15%] max-w-375:left-[50%]
+      800:top-[2%] 800:-translate-y-[-2%] 800:left-[27%] 800:w-[30%] ">
         <Image
           src="/images/star-red.png"
           alt="stars logo red star outline"
           width={500}
           height={500}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-contain pb-[110%] overflow-visible animate-none"
+          className="object-contain pb-[110%] animate-skew"
         />
       </Sticker>
-      <Sticker className="left-[0.5%] bottom-[7%] w-[20%] 600:bottom-[5%] 600:w-[15%] ">
+      <Sticker className="left-[0.5%] bottom-[7%] w-[20%] 
+      600:bottom-[5%] 600:w-[15%] 
+      max-w-375:w-[20%] max-w-375:bottom-[8%] max-w-375:left-[75%]">
         <Image
           src="/images/ticker-burger-cream.png"
           alt="stars trucker cap"
           width={500}
           height={500}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-contain overflow-visible pb-[81%] animate-tilt"
+          className="object-contain pb-[81%] animate-tilt"
         />
       </Sticker>
       <Sticker className="top-[3%] -translate-y-[3%] left-[9%] w-[14%] 400:top-[2%] 400:-translate-y-[2%] 400:left-[9%] 400:w-[10%] 800:top-[13%] 800:-translate-y-[13%] 800:left-[4%] 800:w-[12%] ">
@@ -51,23 +52,23 @@ const Quest: React.FC = () => {
           alt="stars logo star off white"
           width={500}
           height={500}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-contain overflow-visible pb-[82%] animate-rotate"
+          className="object-contain pb-[82%] animate-rotate"
         />
       </Sticker>
-      <Sticker className="top-[25%] -translate-y-[25%] left-[48%] w-[20%] 600:top-[20%] 600:-translate-y-[20%] 600:left-[46%] 600:w-[20%] ">
+      <Sticker className="top-[25%] -translate-y-[25%] left-[48%] w-[20%]
+      max-w-375:top-[30%] max-w-375:left-[50%] 
+      600:top-[20%] 600:-translate-y-[20%] 600:left-[46%] 600:w-[20%] ">
         <Image
           src="/images/cool-vibes-sticker-4.png"
           alt="cool vibes smiley sticker"
           width={500}
           height={500}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="animate-shake object-contain overflow-visible pb-[102%]"
+          className="animate-shake object-contain pb-[102%]"
         />
       </Sticker>
       <div className="absolute pointer-events-none select-none w-full h-full top-0 left-0 bg-orange-300 ">
         <figure className='select-none pointer-events-none'>
-          <div className='w-full h-full top-0 left-0'>
+          <div className='w-full h-full top-0 left-0 '>
             <Image
               src="/images/quest-2.png"
               alt="peace love burgers"

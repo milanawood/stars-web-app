@@ -11,28 +11,28 @@ const Manifest: React.FC = () => {
             alt="burger guy"
             width={500}
             height={105}
-            className="animate-none overflow-visible w-full pb-[21%] object-cover"
+            className="animate-none w-full pb-[21%] object-cover"
           />
       </Sticker>
-      <Sticker className="top-[8%] -translate-y-[8%] left-[25%] w-[50%] 1200:top-[10%] 1200:w-[25%] 1200:left-[35%] max-w-799:left-[35%] max-w-799:w-[60%]">
-        <div className="w-full overflow-visible pb-[13%]">
+      <Sticker className="top-[8%] -translate-y-[8%] left-[25%] w-[50%] 1200:top-[10%] 1200:w-[25%] 1200:left-[35%] max-w-799:left-[35%] max-w-799:w-[60%] max-w-375:w-[30%] max-w-375:top-[57%]">
+        <div className="w-full pb-[13%]">
           <Image
             src="/images/logo-offwhite.png"
             alt="stars off-white logo outline"
             width={250}
             height={250}
-            className="animate-none overflow-visible pb-[39.4558%]"
+            className="animate-none pb-[39.4558%]"
           />
         </div>
       </Sticker>
-      <Sticker className="top-[50%] left-[60%] 800:top-[10%] 800:left-[60%] 800:-translate-y-[22%] 800:w-[50%] 1200:hidden">
+      <Sticker className="top-[50%] left-[60%] 800:top-[10%] 800:left-[60%] 800:-translate-y-[22%] 800:w-[50%] 1200:hidden max-w-375:top-[0%] max-w-375:w-[30%] max-w-375:left-[75%]">
         <div className="w-full overflow-visible pb-[13%]">
           <Image
             src="/images/star-offwhite.png"
             alt="stars off-white logo star outline"
             width={250}
             height={250}
-            className="animate-none overflow-visible pb-[39.4558%]"
+            className="animate-none pb-[39.4558%]"
           />
         </div>
       </Sticker>

@@ -16,9 +16,11 @@ const Newsletter: React.FC = () => {
       </div>
       <div className="p-8 relative z-0 mt-20 800:mt-30 flex justify-center">
         <div className="w-full max-w-[400px] relative rounded-[10px] p-2 bg-[#b2f8e5]">
-          <div className='absolute w-full h-full border border-black rounded-[10px] left-[10px] bottom-[10px] border-solid'></div>
+          <div className='absolute w-full h-full border border-cyan-900 rounded-[10px] left-[10px] bottom-[10px] border-solid'></div>
           <div className="relative">
-            <h3 className="text-black my-2 py-2 text-left p-4 font-termina font-extrabold text-7xl leading-50 uppercase 800:text-80 800:leading-66">
+            <h3 className="text-cyan-900 my-2 py-2 text-left p-4 font-termina font-extrabold text-7xl leading-50 uppercase 
+            800:text-80 800:leading-66
+            max-w-375:text-[6vh]">
               Learn About Our R&D
             </h3>
           </div>
@@ -27,11 +29,12 @@ const Newsletter: React.FC = () => {
               <div className="w-full relative">
                <input
                   placeholder="Email Address"
-                  className="border w-full bg-offwhite box-border font-termina text-16 tracking-[-0.01em] uppercase placeholder-black p-2 px-4 border-black rounded-full 800:py-3 800:px-6"
+                  className="border w-full bg-offwhite box-border font-termina text-16 max-w-375:text-xs tracking-[-0.01em] uppercase placeholder-black p-2 px-4 border-black rounded-full 800:py-3 800:px-6"
                   name="email"
                   type="email"
                 /> 
-                <button className="hover:opacity-80 duration-300 absolute uppercase font-termina inline-flex justify-center items-center right-[4px] top-[3px] h-[calc(100%-6px)] 800:h-[calc(100%-8px)] 800:top-[4px] 800:right-[4px] bg-black text-offwhite border-0 rounded-full text-16 tracking-[-0.01em] px-6 800:px-6">
+                <button className="hover:opacity-80 duration-300 absolute uppercase font-termina inline-flex justify-center items-center right-[4px] top-[3px] h-[calc(100%-6px)] 
+                800:h-[calc(100%-8px)] 800:top-[4px] 800:right-[4px] bg-stars text-fontwhite border-0 rounded-full text-16 max-w-375:text-xs tracking-[-0.01em] px-6 800:px-6">
                   <span className="relative top-[1px]">Sign up</span>
                 </button>
               </div>
@@ -39,7 +42,10 @@ const Newsletter: React.FC = () => {
           </div>
         </div>
       </div>
-      <Sticker className="top-[35%] transform -translate-y-[35%] right-[1%] w-[40%] 400:top-[40%] 400:-translate-y-[24%] 400:right-[1%] 400:w-[30%] 800:top-[350px] 800:transform 800:right-[5%] 800:w-[240px]">
+      <Sticker className="top-[35%] transform -translate-y-[35%] right-[1%] w-[40%] 
+      max-w-375:w-[35%] max-w-375:right-[16%] max-w-375:top-[38%]
+      400:top-[40%] 400:-translate-y-[24%] 400:right-[1%] 400:w-[30%] 
+      800:top-[350px] 800:transform 800:right-[5%] 800:w-[240px]">
         <Image
           src="/images/burger-icon-circle.png"
           alt="STARS® sticker"
@@ -48,7 +54,10 @@ const Newsletter: React.FC = () => {
           className="animate-tilt pb-[97%] w-full"
         />
       </Sticker>
-      <Sticker className=" top-[52%] transform -translate-y-[52%] left-[40%] w-[140px] 400:top-[75%] 400:-translate-y-[36%] 400:left-[20%] 400:w-[200px] 800:top-[440px] 800:transform 800:left-[40%] 800:w-[140px]">
+      <Sticker className=" top-[52%] transform -translate-y-[52%] left-[40%] w-[140px]
+      max-w-375:top-[65%] max-w-375:left-[17%]
+      400:top-[75%] 400:-translate-y-[36%] 400:left-[20%] 400:w-[200px] 
+      800:top-[440px] 800:transform 800:left-[40%] 800:w-[140px]">
         <Image
           src="/images/stereo-sticker-7.png"
           alt="STARS® sticker"

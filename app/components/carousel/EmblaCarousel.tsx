@@ -36,6 +36,8 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides, options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
+      containScroll: 'keepSnaps',
+      align: 'start',
       breakpoints: {
         '(min-width: 768px)': { loop: true },
         '(min-width: 200px)': { loop: true },
